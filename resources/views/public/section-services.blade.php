@@ -1,9 +1,7 @@
-<!-- Services Section -->
-<section id="services" class="services section">
+<section id="services" class="services section light-background">
 
     <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>
-        {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> --}}
     </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -97,19 +95,19 @@
                         <h3>Custom Web Development</h3>
                         <p>Kami membantu bisnis membangun website dan sistem web modern yang cepat, responsif, aman, dan scalable sesuai kebutuhan perusahaan Anda.</p>
                         <div class="service-features">
-                            <div class="feature-item">
+                            <div class="feature-item align-items-center">
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Company Profile Website</span>
                             </div>
-                            <div class="feature-item">
+                            <div class="feature-item align-items-center">
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Custom Dashboard & ERP</span>
                             </div>
-                            <div class="feature-item">
+                            <div class="feature-item align-items-center">
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>E-Commerce Development</span>
                             </div>
-                            <div class="feature-item">
+                            <div class="feature-item align-items-center">
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Landing Page Optimization</span>
                             </div>

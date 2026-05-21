@@ -1,4 +1,4 @@
-<section id="hero" class="hero section dark-background">
+<section id="hero" class="hero section light-background">
 
     <div class="container">
         <div class="row align-items-center">
@@ -45,10 +45,12 @@
                             <i class="bi bi-stack"></i>
                             <span>Lihat Portfolio</span>
                         </a>
-
                     </div>
+                    {{-- hero-actions --}}
                 </div>
+                {{-- hero-content --}}
             </div>
+            {{-- col-lg-6 --}}
 
             <div class="col-lg-6">
                 <div class="hero-visual">
@@ -56,6 +58,7 @@
                         <img src="{{ $hero->image_url }}" alt="Product Dashboard" class="img-fluid main-screen">
                     </div>
                 </div>
+                {{-- hero-visual --}}
             </div>
             {{-- col-lg-6 --}}
 
