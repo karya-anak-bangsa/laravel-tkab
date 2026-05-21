@@ -6,7 +6,7 @@
         {{-- set metadata on this website --}}
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>PT. Teknologi Karya Anak Bangsa</title>
+        <title>PT. Teknologi Karya Anak Bangsa | Solusi IT Terbaik untuk Keberlanjutan Bisnis Anda</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
 
@@ -29,10 +29,13 @@
         {{-- Main CSS File --}}
         <link rel="stylesheet" href="{{ asset('template-frontend/assets/css/main.css') }}">
 
+        {{-- plugin style - fontawesome 6.7.2 --}}
+        <link rel="stylesheet" href="{{ asset('template-plugins/fontawesome-6.7.2/css/all.min.css') }}">
+
         @stack('styles')
     </head>
 
-    <body class="main">
+    <body class="index-page">
 
         <header id="header" class="header d-flex align-items-center fixed-top">
             @include('layouts.partials-frontend.header')
@@ -62,6 +65,9 @@
 
         {{-- Main JS File --}}
         <script src="{{ asset('template-frontend/assets/js/main.js') }}"></script>
+
+        {{-- scripts fontawesome 6.7.2 --}}
+        <script src="{{ asset('template-plugins/fontawesome-6.7.2/js/all.min.js') }}"></script>
 
         @stack('scripts')
     </body>

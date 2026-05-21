@@ -1,4 +1,4 @@
-<section id="hero" class="hero section light-background">
+<section id="hero" class="hero section dark-background">
 
     <div class="container">
         <div class="row align-items-center">
@@ -8,7 +8,7 @@
 
                     <div class="hero-badge">
                         <i class="bi bi-lightning-fill"></i>
-                        <span>The Best IT Solutions for Your Business Continuity</span>
+                        <span>IT Solutions for Your Business Continuity</span>
                     </div>
 
                     <h1 class="hero-title">{{ $hero->title }}</h1>

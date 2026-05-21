@@ -1,13 +1,13 @@
 <section id="services" class="services section light-background">
 
-    <div class="container section-title" data-aos="fade-up">
+    <div class="container section-title">
         <h2>Services</h2>
     </div>
 
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="container">
 
         <div class="row g-3">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-lg-4">
                 <div class="service-card">
                     <div class="service-card-header">
                         <div class="service-icon">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-lg-4">
                 <div class="service-card">
                     <div class="service-card-header">
                         <div class="service-icon">
@@ -77,11 +77,11 @@
                         </div>
                     </div>
                     <div class="service-card-footer">
-                        <a href="service-details.html" class="service-link">Learn More <i class="bi bi-arrow-right"></i></a>
+                        <a href="service-details.html" class="service-link">Laravel • Flutter • React • MySQL</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-lg-4">
                 <div class="service-card">
                     <div class="service-card-header">
                         <div class="service-icon">
@@ -95,32 +95,32 @@
                         <h3>Custom Web Development</h3>
                         <p>Kami membantu bisnis membangun website dan sistem web modern yang cepat, responsif, aman, dan scalable sesuai kebutuhan perusahaan Anda.</p>
                         <div class="service-features">
-                            <div class="feature-item align-items-center">
+                            <div class="feature-item">
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Company Profile Website</span>
                             </div>
-                            <div class="feature-item align-items-center">
+                            <div class="feature-item">
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Custom Dashboard & ERP</span>
                             </div>
-                            <div class="feature-item align-items-center">
+                            <div class="feature-item">
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>E-Commerce Development</span>
                             </div>
-                            <div class="feature-item align-items-center">
+                            <div class="feature-item">
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Landing Page Optimization</span>
                             </div>
                         </div>
                     </div>
                     <div class="service-card-footer">
-                        <a href="service-details.html" class="service-link">Learn More <i class="bi bi-arrow-right"></i></a>
+                        <a href="service-details.html" class="service-link">Laravel • Flutter • React • MySQL</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="0">
+        <div class="row">
             <div class="col-12">
                 <div class="cta-section">
                     <div class="row align-items-center">

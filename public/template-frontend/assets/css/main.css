@@ -951,10 +951,10 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-    padding-top: 194px;
+    padding-top: 160px;
     position: relative;
     overflow: hidden;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     min-height: 100vh;
 }
 

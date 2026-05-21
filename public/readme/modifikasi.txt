@@ -1,1 +1,19 @@
 1. Warna navbar diganti jadi warna putih (.navmenu a, .navmenu a:focus {})
+
+2. Penyesuaian di hero section 
+
+.hero { // Sebelumnya
+    padding-top: 194px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+
+.hero { // Sekarang
+    padding-top: 160px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+    /* min-height: 100vh; */
+}
+
