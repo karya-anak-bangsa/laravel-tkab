@@ -146,9 +146,9 @@
                         </div>
                         <div class="col-lg-4 text-lg-end">
                             <div class="cta-actions">
-                                <a href="service-details.html" class="btn-primary">
+                                <a href="service-details.html" class="btn-secondary">
                                     <i class="bi bi-whatsapp me-2"></i>Konsultasi Gratis</a>
-                                <a href="service-details.html" class="btn-primary">
+                                <a href="service-details.html" class="btn-secondary">
                                     <i class="bi bi-stack me-2"></i>Lihat Portfolio</a>
                             </div>
                         </div>
