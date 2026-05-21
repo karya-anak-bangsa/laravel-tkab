@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Services extends Model
+class ServicesFeatures extends Model
 {
 
 
@@ -18,21 +18,20 @@ class Services extends Model
     use SoftDeletes, HasFactory;
 
     # ...
-    protected $table        = 'tb_services';
-    protected $primaryKey   = 'id_services';
+    protected $table        = 'tb_services_features';
+    protected $primaryKey   = 'id_services_features';
 
     # ...
     protected $keyType      = 'int';
     public $incrementing    = true;
 
-    # ...
+
+    # -------------------------------------------------------------------------- #
+    # Mass Assignment                                                            #
+    # -------------------------------------------------------------------------- #
     protected $fillable = [
-        'icon',
-        'category',
-        'title',
-        'description',
-        'tech_stack',
-        'slug',
+        'id_services',
+        'features',
         'sort_order',
         'status_data',
     ];
@@ -67,13 +66,8 @@ class Services extends Model
     # -------------------------------------------------------------------------- #
     # RELATIONSHIP                                                               #
     # -------------------------------------------------------------------------- #
-    public function servicesFeatures(): HasMany
+    public function service(): BelongsTo
     {
-        return $this->hasMany(ServicesFeatures::class, 'id_services', 'id_services');
-    }
-
-    public function activeServicesFeatures(): HasMany
-    {
-        return $this->hasMany(ServicesFeatures::class, 'id_services', 'id_services')->active()->ordered();
+        return $this->belongsTo(Services::class, 'id_services', 'id_services');
     }
 }
