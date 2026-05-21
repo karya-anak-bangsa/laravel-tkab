@@ -17,8 +17,8 @@
             </li>
             <li><a href="">Portfolio</a></li>
             <li><a href="">Learning Center</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>

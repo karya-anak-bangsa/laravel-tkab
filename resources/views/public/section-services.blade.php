@@ -11,7 +11,7 @@
                 <div class="service-card">
                     <div class="service-card-header">
                         <div class="service-icon">
-                            <i class="bi bi-code-slash"></i>
+                            <i class="bi bi-phone-fill"></i>
                         </div>
                         <div class="service-meta">
                             <span class="service-category">Web Solutions</span>
@@ -146,8 +146,10 @@
                         </div>
                         <div class="col-lg-4 text-lg-end">
                             <div class="cta-actions">
-                                <a href="service-details.html" class="btn-primary">Konsultasi Gratis</a>
-                                <a href="service-details.html" class="btn-secondary">Lihat Portfolio</a>
+                                <a href="service-details.html" class="btn-primary">
+                                    <i class="bi bi-whatsapp me-2"></i>Konsultasi Gratis</a>
+                                <a href="service-details.html" class="btn-primary">
+                                    <i class="bi bi-stack me-2"></i>Lihat Portfolio</a>
                             </div>
                         </div>
                     </div>
