@@ -7,117 +7,40 @@
     <div class="container">
 
         <div class="row g-3">
-            <div class="col-lg-4">
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <div class="service-icon">
-                            <i class="bi bi-phone-fill"></i>
-                        </div>
-                        <div class="service-meta">
-                            <span class="service-category">Web Solutions</span>
-                        </div>
-                    </div>
-                    <div class="service-card-body">
-                        <h3>Custom Web Development</h3>
-                        <p>Kami membantu bisnis membangun website dan sistem web modern yang cepat, responsif, aman, dan scalable sesuai kebutuhan perusahaan Anda.</p>
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Company Profile Website</span>
+
+            @foreach ($services as $service)
+                <div class="col-lg-4">
+                    <div class="service-card">
+                        <div class="service-card-header">
+                            <div class="service-icon">
+                                <i class="{{ $service->icon }}"></i>
                             </div>
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Custom Dashboard & ERP</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>E-Commerce Development</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Landing Page Optimization</span>
+                            <div class="service-meta">
+                                <span class="service-category">{{ $service->category }}</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="service-card-footer">
-                        <a href="service-details.html" class="service-link">Laravel • Flutter • React • MySQL</a>
+                        <div class="service-card-body">
+                            <h3>{{ $service->title }}</h3>
+                            <p>{{ $service->description }}</p>
+                            <div class="service-features">
+                                @foreach ($service->activeServicesFeatures as $feature)
+                                    <div class="feature-item align-items-center">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        <span>{{ $feature->features }}</span>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                        <div class="service-card-footer">
+                            {{-- <a href="service-details.html" class="service-link">Learn More <i class="bi bi-arrow-right"></i></a> --}}
+                            <span class="service-link">
+                                {{ $service->tech_stack }}
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <div class="service-icon">
-                            <i class="bi bi-code-slash"></i>
-                        </div>
-                        <div class="service-meta">
-                            <span class="service-category">Web Solutions</span>
-                        </div>
-                    </div>
-                    <div class="service-card-body">
-                        <h3>Custom Web Development</h3>
-                        <p>Kami membantu bisnis membangun website dan sistem web modern yang cepat, responsif, aman, dan scalable sesuai kebutuhan perusahaan Anda.</p>
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Company Profile Website</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Custom Dashboard & ERP</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>E-Commerce Development</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Landing Page Optimization</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-card-footer">
-                        <a href="service-details.html" class="service-link">Laravel • Flutter • React • MySQL</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="service-card">
-                    <div class="service-card-header">
-                        <div class="service-icon">
-                            <i class="bi bi-code-slash"></i>
-                        </div>
-                        <div class="service-meta">
-                            <span class="service-category">Web Solutions</span>
-                        </div>
-                    </div>
-                    <div class="service-card-body">
-                        <h3>Custom Web Development</h3>
-                        <p>Kami membantu bisnis membangun website dan sistem web modern yang cepat, responsif, aman, dan scalable sesuai kebutuhan perusahaan Anda.</p>
-                        <div class="service-features">
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Company Profile Website</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Custom Dashboard & ERP</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>E-Commerce Development</span>
-                            </div>
-                            <div class="feature-item">
-                                <i class="bi bi-check-circle-fill"></i>
-                                <span>Landing Page Optimization</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-card-footer">
-                        <a href="service-details.html" class="service-link">Laravel • Flutter • React • MySQL</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
         </div>
 
         <div class="row">
@@ -147,16 +70,20 @@
                         <div class="col-lg-4 text-lg-end">
                             <div class="cta-actions">
                                 <a href="service-details.html" class="btn-secondary">
-                                    <i class="bi bi-whatsapp me-2"></i>Konsultasi Gratis</a>
+                                    <i class="bi bi-whatsapp me-2"></i>Konsultasi Gratis
+                                </a>
                                 <a href="service-details.html" class="btn-secondary">
-                                    <i class="bi bi-stack me-2"></i>Lihat Portfolio</a>
+                                    <i class="bi bi-stack me-2"></i>Lihat Portfolio
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                {{-- cta-section --}}
             </div>
+            {{-- col-lg-12 --}}
         </div>
+        {{-- row --}}
 
     </div>
-
-</section><!-- /Services Section -->
+</section>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 # list model untuk ditampilkan dihalaman frontend
 use App\Models\Hero;
+use App\Models\Services;
 
 class LandingPageController extends Controller
 {
@@ -15,10 +16,12 @@ class LandingPageController extends Controller
 
         # Query untuk menampilkan data dari database
         $hero = Hero::first();
+        $services = Services::query()->with('activeServicesFeatures')->active()->ordered()->get();
 
         # return values
         return view('public.main', compact(
             'hero',
+            'services',
         ));
 
         // return view('layouts.frontend');
