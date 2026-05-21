@@ -5,29 +5,34 @@
 
             <div class="col-lg-6">
                 <div class="hero-content pe-0 pe-lg-5">
+
+                    <div class="hero-badge">
+                        <i class="bi bi-lightning-fill"></i>
+                        <span>The Best IT Solutions for Your Business Continuity</span>
+                    </div>
+
                     <h1 class="hero-title">{{ $hero->title }}</h1>
-                    {{-- <h1 class="hero-title">Transformasi Digital di Akselerasi Bisnis Anda</h1> --}}
-                    <p class="hero-description">
-                        {{ $hero->description }}
-                        {{-- Kami menghadirkan solusi teknologi modern melalui jasa pembuatan website, aplikasi mobile, serta program pelatihan IT intensif untuk mempersiapkan SDM siap kerja. --}}
-                        {{-- Kami menghadirkan solusi digital modern yang membantu bisnis berkembang lebih cepat, efisien, dan siap menghadapi era teknologi. --}}
-                        {{-- Solusi software development, mobile apps, dan pelatihan IT profesional untuk membantu bisnis berkembang di era digital. --}}
-                    </p>
+                    <p class="hero-description">{{ $hero->description }}</p>
+
+                    {{-- Kami menghadirkan solusi teknologi modern melalui jasa pembuatan website, aplikasi mobile, serta program pelatihan IT intensif untuk mempersiapkan SDM siap kerja. --}}
+                    {{-- Kami menghadirkan solusi digital modern yang membantu bisnis berkembang lebih cepat, efisien, dan siap menghadapi era teknologi. --}}
+                    {{-- Solusi software development, mobile apps, dan pelatihan IT profesional untuk membantu bisnis berkembang di era digital. --}}
+
                     <div class="hero-features">
                         <div class="feature-item">
-                            <i class="bi bi-check-circle-fill"></i>
+                            <i class="bi bi-globe2"></i>
                             <span>Web Development</span>
                         </div>
                         <div class="feature-item">
-                            <i class="bi bi-check-circle-fill"></i>
+                            <i class="bi bi-phone-fill"></i>
                             <span>Mobile Development</span>
                         </div>
                         <div class="feature-item">
-                            <i class="bi bi-check-circle-fill"></i>
+                            <i class="bi bi-bar-chart-fill"></i>
                             <span>Training IT</span>
                         </div>
                         <div class="feature-item">
-                            <i class="bi bi-check-circle-fill"></i>
+                            <i class="bi bi-rocket-takeoff-fill"></i>
                             <span>Bootcamp</span>
                         </div>
                     </div>
@@ -52,6 +57,7 @@
                     </div>
                 </div>
             </div>
+            {{-- col-lg-6 --}}
 
         </div>
         {{-- row --}}
