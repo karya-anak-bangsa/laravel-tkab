@@ -5,12 +5,13 @@
 
             <div class="col-lg-6">
                 <div class="hero-content pe-0 pe-lg-5">
-                    <h1 class="hero-title">Solusi IT Terbaik untuk Bisnis Anda</h1>
+                    <h1 class="hero-title">{{ $hero->title }}</h1>
                     {{-- <h1 class="hero-title">Transformasi Digital di Akselerasi Bisnis Anda</h1> --}}
                     <p class="hero-description">
+                        {{ $hero->description }}
                         {{-- Kami menghadirkan solusi teknologi modern melalui jasa pembuatan website, aplikasi mobile, serta program pelatihan IT intensif untuk mempersiapkan SDM siap kerja. --}}
                         {{-- Kami menghadirkan solusi digital modern yang membantu bisnis berkembang lebih cepat, efisien, dan siap menghadapi era teknologi. --}}
-                        Solusi software development, mobile apps, dan pelatihan IT profesional untuk membantu bisnis berkembang di era digital.
+                        {{-- Solusi software development, mobile apps, dan pelatihan IT profesional untuk membantu bisnis berkembang di era digital. --}}
                     </p>
                     <div class="hero-features">
                         <div class="feature-item">

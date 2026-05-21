@@ -12,16 +12,11 @@
                 <ul>
                     <li><a href="#">Web Development</a></li>
                     <li><a href="#">Mobile Development</a></li>
+                    <li><a href="#">Training & Bootcamps</a></li>
                 </ul>
             </li>
             <li><a href="">Portfolio</a></li>
-            <li class="dropdown">
-                <a href="#"><span>Learning Center</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                    <li><a href="#">Training & Bootcamps</a></li>
-                    <li><a href="#">Tutorial of Programming </a></li>
-                </ul>
-            </li>
+            <li><a href="">Learning Center</a></li>
             <li><a href="">About Us</a></li>
             <li><a href="">Contact Us</a></li>
         </ul>

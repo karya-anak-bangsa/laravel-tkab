@@ -1,0 +1,1 @@
+1. Warna navbar diganti jadi warna putih (.navmenu a, .navmenu a:focus {})

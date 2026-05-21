@@ -16,7 +16,7 @@ class HeroSeeder extends Seeder
         Hero::create([
             'title'         => 'Solusi IT Terbaik untuk Keberlanjutan Bisnis Anda',
             'description'   => 'Solusi software development, mobile apps, dan pelatihan IT profesional untuk membantu bisnis berkembang di era digital.',
-            'image'         => 'hero/hero-2.png',
+            'image'         => 'hero/hero-1.png',
             'keywords_1'    => 'Web Development',
             'keywords_2'    => 'Mobile Development',
             'keywords_3'    => 'Training IT',
