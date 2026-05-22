@@ -1,11 +1,10 @@
 <!-- Portfolio Section -->
-<section id="portfolio" class="portfolio section light-background">
+<section id="portfolio" class="portfolio section">
 
-    <!-- Section Title -->
     <div class="container section-title">
         <h2>Portfolio</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-    </div><!-- End Section Title -->
+    </div>
 
     <div class="container">
 

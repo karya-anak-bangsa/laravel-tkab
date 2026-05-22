@@ -1,4 +1,4 @@
-<section id="learning-center" class="service-details section light-background">
+<section id="learning-center" class="service-details section">
 
     <div class="container section-title">
         <h2>Learning Center</h2>
