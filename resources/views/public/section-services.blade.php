@@ -1,7 +1,8 @@
-<section id="services" class="services section light-background">
+<section id="services" class="services section">
 
     <div class="container section-title">
         <h2>Services</h2>
+        <p>Diskusikan kebutuhan website, aplikasi mobile, atau pelatihan IT bersama tim kami.</p>
     </div>
 
     <div class="container">
@@ -24,7 +25,7 @@
                             <p>{{ $service->description }}</p>
                             <div class="service-features">
                                 @foreach ($service->activeServicesFeatures as $feature)
-                                    <div class="feature-item align-items-center">
+                                    <div class="feature-item">
                                         <i class="bi bi-check-circle-fill"></i>
                                         <span>{{ $feature->features }}</span>
                                     </div>
@@ -32,7 +33,6 @@
                             </div>
                         </div>
                         <div class="service-card-footer">
-                            {{-- <a href="service-details.html" class="service-link">Learn More <i class="bi bi-arrow-right"></i></a> --}}
                             <span class="service-link">
                                 {{ $service->tech_stack }}
                             </span>
@@ -50,7 +50,7 @@
                         <div class="col-lg-8">
                             <div class="cta-content">
                                 <h3>Kami Siap Membangun Solusi Digital Anda</h3>
-                                <p>Diskusikan kebutuhan website, aplikasi mobile, atau pelatihan IT bersama tim kami.</p>
+                                {{-- <p>Diskusikan kebutuhan website, aplikasi mobile, atau pelatihan IT bersama tim kami.</p> --}}
                                 <div class="cta-stats">
                                     <div class="stat-item">
                                         <div class="stat-number">7+</div>
@@ -69,10 +69,10 @@
                         </div>
                         <div class="col-lg-4 text-lg-end">
                             <div class="cta-actions">
-                                <a href="service-details.html" class="btn-secondary">
+                                <a href="" class="btn-secondary">
                                     <i class="bi bi-whatsapp me-2"></i>Konsultasi Gratis
                                 </a>
-                                <a href="service-details.html" class="btn-secondary">
+                                <a href="" class="btn-secondary">
                                     <i class="bi bi-stack me-2"></i>Lihat Portfolio
                                 </a>
                             </div>

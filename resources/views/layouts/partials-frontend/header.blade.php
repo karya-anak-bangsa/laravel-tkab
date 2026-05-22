@@ -10,15 +10,15 @@
             <li class="dropdown">
                 <a href="#"><span>Services</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Mobile Development</a></li>
-                    <li><a href="#">Training & Bootcamps</a></li>
+                    <li><a href="#services">Web Development</a></li>
+                    <li><a href="#services">Mobile Development</a></li>
+                    <li><a href="#services">Training & Bootcamps</a></li>
                 </ul>
             </li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Learning Center</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#learning-center">Learning Center</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>

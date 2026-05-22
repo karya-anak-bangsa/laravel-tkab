@@ -3,4 +3,5 @@
 @section('content')
     @include('public.section-hero')
     @include('public.section-services')
+    @include('public.section-learning-center')
 @endsection
