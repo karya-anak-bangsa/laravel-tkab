@@ -8,7 +8,6 @@
     <div class="container">
 
         <div class="row g-3">
-
             @foreach ($services as $service)
                 <div class="col-lg-4">
                     <div class="service-card">
@@ -25,7 +24,7 @@
                             <p>{{ $service->description }}</p>
                             <div class="service-features">
                                 @foreach ($service->activeServicesFeatures as $feature)
-                                    <div class="feature-item">
+                                    <div class="feature-item align-items-end">
                                         <i class="bi bi-check-circle-fill"></i>
                                         <span>{{ $feature->features }}</span>
                                     </div>
@@ -40,7 +39,6 @@
                     </div>
                 </div>
             @endforeach
-
         </div>
 
         <div class="row">
