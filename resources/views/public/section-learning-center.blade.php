@@ -1,4 +1,4 @@
-<section id="service-details" class="service-details section light-background">
+<section id="learning-center" class="service-details section light-background">
 
     <div class="container section-title">
         <h2>Learning Center</h2>
@@ -54,14 +54,14 @@
                     <div class="industry-grid">
                         <div class="industry-card">
                             <div class="industry-icon bg-white">
-                                <img src="{{ asset('img/tutorials/python.png') }}" alt="" class="img-fluid">
+                                <img src="{{ asset('img/learning-center/python.png') }}" alt="" class="img-fluid">
                             </div>
                             <h4>Python</h4>
                             {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, accusantium. Debitis culpa voluptatibus a suscipit quidem sint atque...<b>Selengkapnya</b></p> --}}
                         </div>
                         <div class="industry-card">
                             <div class="industry-icon bg-white">
-                                <img src="{{ asset('img/tutorials/java.png') }}" alt="" class="img-fluid">
+                                <img src="{{ asset('img/learning-center/java.png') }}" alt="" class="img-fluid">
                             </div>
                             <h4>Java</h4>
                             {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, accusantium. Debitis culpa voluptatibus a suscipit quidem sint atque...<b>Selengkapnya</b></p> --}}
@@ -69,14 +69,14 @@
 
                         <div class="industry-card">
                             <div class="industry-icon bg-white">
-                                <img src="{{ asset('img/tutorials/javascript.png') }}" alt="" class="img-fluid">
+                                <img src="{{ asset('img/learning-center/javascript.png') }}" alt="" class="img-fluid">
                             </div>
                             <h4>JavaScript</h4>
                             {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, accusantium. Debitis culpa voluptatibus a suscipit quidem sint atque...<b>Selengkapnya</b></p> --}}
                         </div>
                         <div class="industry-card">
                             <div class="industry-icon bg-white">
-                                <img src="{{ asset('img/tutorials/laravel.png') }}" alt="" class="img-fluid">
+                                <img src="{{ asset('img/learning-center/laravel.png') }}" alt="" class="img-fluid">
                             </div>
                             <h4>Laravel</h4>
                             {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, accusantium. Debitis culpa voluptatibus a suscipit quidem sint atque...<b>Selengkapnya</b></p> --}}
