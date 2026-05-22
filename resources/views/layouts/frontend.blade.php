@@ -11,8 +11,8 @@
         <meta name="keywords" content="">
 
         {{-- Favicons --}}
-        <link href="{{ asset('template-frontend/assets/img/laravel-merah.png') }}" rel="icon">
-        <link href="{{ asset('template-frontend/assets/img/laravel-merah.png') }}" rel="apple-touch-icon">
+        <link href="{{ asset('img/laravel-merah.png') }}" rel="icon">
+        <link href="{{ asset('img/laravel-merah.png') }}" rel="apple-touch-icon">
 
         {{-- Fonts --}}
         <link href="https://fonts.googleapis.com" rel="preconnect">

@@ -247,7 +247,8 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    /* color: var(--nav-color); */
+    color: white;
     font-size: 15px;
     padding: 0 2px;
     font-family: var(--nav-font);
@@ -937,6 +938,7 @@ section,
   position: relative;
   overflow: hidden;
   padding-bottom: 80px;
+  min-height: 100vh;
 }
 
 .hero .hero-content .hero-badge {
