@@ -36,6 +36,13 @@
                 @include('layouts.partials-backend.navbar')
             </nav>
 
+            {{-- 2. sidebar --}}
+            <aside class="main-sidebar sidebar-dark-warning">
+                <div class="sidebar">
+                    @include('layouts.partials-backend.sidebar')
+                </div>
+            </aside>
+
         </div>
         {{-- wrapper --}}
 
