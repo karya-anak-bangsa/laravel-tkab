@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
 
+    <head>
+        {{-- set metadata on this website --}}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>PT. Teknologi Karya Anak Bangsa | Solusi IT Terbaik untuk Keberlanjutan Bisnis Anda</title>
+
+        {{-- set icon --}}
+        <link rel="icon" href="{{ asset('img/laravel-merah.png') }}" type="image/png">
+
+        {{-- plugin style - google pro font --}}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+        {{-- plugin style - fontawesome 6.7.2 dan summernote-0.9.0 --}}
+        <link rel="stylesheet" href="{{ asset('template-plugins/fontawesome-6.7.2/css/all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('template-plugins/summernote-0.9.0/summernote-bs4.min.css') }}">
+
+        {{-- template style - adminlte 3.2.0 --}}
+        <link rel="stylesheet" href="{{ asset('template-backend/adminlte-3.2.0/dist/css/adminlte.min.css') }}">
+
+        {{-- template style - adminlte custom --}}
+        <link rel="stylesheet" href="{{ asset('template-backend/adminlte-stylesheet/template.css') }}">
+
+        @stack('styles')
+    </head>
+
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
+
+            {{-- 1. navbar --}}
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                @include('layouts.partials-backend.navbar')
+            </nav>
+
+        </div>
+        {{-- wrapper --}}
+
+        # ------------------------------------------------------------------------------------------------- #
+        # Scripts JS -------------------------------------------------------------------------------------- #
+        # ------------------------------------------------------------------------------------------------- #
+
+        {{-- scripts jquery --}}
+        <script src="{{ asset('template-backend/adminlte-3.2.0/plugins/jquery/jquery.min.js') }}"></script>
+
+        {{-- scripts bootstrap 4.6.x --}}
+        <script src="{{ asset('template-backend/adminlte-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+        {{-- scripts bs-custom-file-input --}}
+        <script src="{{ asset('template-backend/adminlte-3.2.0/plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
+        <script>
+            $(function() {
+                bsCustomFileInput.init();
+            });
+        </script>
+
+        {{-- scripts adminlte 3.2.0 --}}
+        <script src="{{ asset('template-backend/adminlte-3.2.0/dist/js/adminlte.min.js') }}"></script>
+
+        {{-- scripts fontawesome 6.7.2 dan summernote-0.9.0 --}}
+        <script src="{{ asset('template-plugins/fontawesome-6.7.2/js/all.min.js') }}"></script>
+        <script src="{{ asset('template-plugins/summernote-0.9.0/summernote-bs4.min.js') }}"></script>
+        <script>
+            $(document).ready(function() {
+                $('.summernote').summernote({
+                    height: 250,
+                });
+            });
+        </script>
+        @stack('scripts')
+    </body>
+
+</html>
