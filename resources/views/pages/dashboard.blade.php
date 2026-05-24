@@ -2,9 +2,8 @@
 @section('nav-dashboard', 'active')
 @section('content')
 
-    {{-- Benner --}}
-    <x-pages.dashboard-banner>
-        Selamat Datang di PT. Teknologi Karya Anak Bangsa
-    </x-pages.dashboard-banner>
+    <x-pages.dashboard-profile
+        title="Selamat Datang di Halaman Administrator">
+    </x-pages.dashboard-profile>
 
 @endsection

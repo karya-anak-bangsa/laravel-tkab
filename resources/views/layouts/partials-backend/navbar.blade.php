@@ -6,7 +6,7 @@
 <ul class="navbar-nav ml-auto">
     <li class="nav-item d-none d-sm-inline-block">
         <span class="nav-link text-dark">
-            <i class="fa-solid fa-user-gear mr-2"></i>You are logged in as Administrator
+            <i class="fa-solid fa-user-gear mr-2"></i>Aryajaya Alamsyah, S.Kom., M.Kom.
         </span>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
