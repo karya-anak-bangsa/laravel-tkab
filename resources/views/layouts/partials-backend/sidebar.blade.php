@@ -17,7 +17,6 @@
             </a>
         </li>
 
-        {{-- <li class="nav-header mt-2">Company Profile</li> --}}
         <li class="nav-header mt-2">COMPANY PROFILE</li>
         <li class="nav-item">
             <a href="" class="nav-link @yield('nav-hero')">
@@ -38,19 +37,19 @@
             </a>
         </li>
         <li class="nav-item ">
-            <a href="" class="nav-link @yield('nav-porfolio')">
+            <a href="" class="nav-link @yield('nav-learning-center')">
                 <i class="nav-icon fa-solid fa-graduation-cap"></i>
                 <p>Learning Center</p>
             </a>
         </li>
         <li class="nav-item ">
-            <a href="" class="nav-link @yield('nav-porfolio')">
+            <a href="" class="nav-link @yield('nav-faq')">
                 <i class="nav-icon fa-solid fa-circle-question"></i>
                 <p>FAQ</p>
             </a>
         </li>
         <li class="nav-item ">
-            <a href="" class="nav-link @yield('nav-porfolio')">
+            <a href="" class="nav-link @yield('nav-contact')">
                 <i class="nav-icon fa-solid fa-address-book"></i>
                 <p>Contact</p>
             </a>
@@ -58,7 +57,7 @@
 
         <li class="nav-header mt-2">LOGOUT</li>
         <li class="nav-item">
-            <a href="" class="nav-link @yield('nav-hero')">
+            <a href="" class="nav-link @yield('nav-logout')">
                 <i class="nav-icon fa-solid fa-right-from-bracket"></i>
                 <p>Logout</p>
             </a>

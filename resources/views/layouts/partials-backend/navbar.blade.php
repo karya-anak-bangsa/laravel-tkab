@@ -9,4 +9,9 @@
             <i class="fa-solid fa-user-gear mr-2"></i>You are logged in as Administrator
         </span>
     </li>
+    <li class="nav-item d-none d-sm-inline-block">
+        <span class="nav-link text-danger">
+            <i class="fa-solid fa-right-from-bracket mr-2"></i>Logout
+        </span>
+    </li>
 </ul>

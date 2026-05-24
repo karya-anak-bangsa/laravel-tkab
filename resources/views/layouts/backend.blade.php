@@ -37,11 +37,23 @@
             </nav>
 
             {{-- 2. sidebar --}}
-            <aside class="main-sidebar sidebar-dark-warning">
+            <aside class="main-sidebar sidebar-dark-info">
                 <div class="sidebar">
                     @include('layouts.partials-backend.sidebar')
                 </div>
             </aside>
+
+            {{-- 3. content --}}
+            <div class="content-wrapper">
+                <div class="content pt-3 pb-3">
+                    <div class="container-fluid">
+                        @yield('content')
+                    </div>
+                    {{-- container-fluid --}}
+                </div>
+                {{-- content --}}
+            </div>
+            {{-- content-wrapper --}}
 
         </div>
         {{-- wrapper --}}
