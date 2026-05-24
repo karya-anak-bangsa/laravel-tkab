@@ -7,7 +7,18 @@
                     <i class="fa-solid fa-chart-simple mr-2"></i>{{ $title }}
                 </span>
             </div>
-            <div class="card-body"></div>
+            <div class="card-body">
+                <table class="table border-bottom">
+                    <tr>
+                        <td width="20%" class="text-bold">Nama Lengkap</td>
+                        <td width="80%" class="text-dark">Aryajaya Alamsyah, S.Kom., M.Kom.</td>
+                    </tr>
+                    <tr>
+                        <td width="20%" class="text-bold">Jabatan</td>
+                        <td width="80%" class="text-dark">Senior Developer</td>
+                    </tr>
+                </table>
+            </div>
             <div class="card-footer">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="text-left text-dark">
