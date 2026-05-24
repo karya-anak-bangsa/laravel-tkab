@@ -19,7 +19,7 @@
 
         <li class="nav-header mt-2">COMPANY PROFILE</li>
         <li class="nav-item">
-            <a href="" class="nav-link @yield('nav-hero')">
+            <a href="{{ route('admin.hero.index') }}" class="nav-link @yield('nav-hero')">
                 <i class="nav-icon fa-solid fa-building-columns"></i>
                 <p>About TKAB</p>
             </a>

@@ -3,7 +3,7 @@
 
         <div class="card card-outline card-info">
             <div class="card-header">
-                <span class="text-info">
+                <span class="text-dark">
                     <i class="fa-solid fa-chart-simple mr-2"></i>{{ $title }}
                 </span>
             </div>
