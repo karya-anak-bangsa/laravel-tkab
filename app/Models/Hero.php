@@ -3,13 +3,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Hero extends Model
 {
-    # ...
+
+    # -------------------------------------------------------------------------- #
+    # CUSTOM TABLE                                                               #
+    # -------------------------------------------------------------------------- #
     use SoftDeletes, HasFactory;
 
     # ...
@@ -20,7 +24,10 @@ class Hero extends Model
     protected $keyType      = 'int';
     public $incrementing    = true;
 
-    # ...
+
+    # -------------------------------------------------------------------------- #
+    # MASS ASSIGNMENT
+    # -------------------------------------------------------------------------- #
     protected $fillable = [
         'title',
         'description',
@@ -47,7 +54,26 @@ class Hero extends Model
         'deleted_at' => 'datetime',
     ];
 
-    # ...
+
+    # -------------------------------------------------------------------------- #
+    # CONSTANTS                                                                  #
+    # -------------------------------------------------------------------------- #
+    const STATUS_ACTIVE     = 'Active';
+    const STATUS_NOT_ACTIVE = 'Not Active';
+
+
+    # -------------------------------------------------------------------------- #
+    # SCOPES                                                                     #
+    # -------------------------------------------------------------------------- #
+    public function scopeActive(Builder $query): Builder
+    {
+        return $query->where('status_data', self::STATUS_ACTIVE);
+    }
+
+
+    # -------------------------------------------------------------------------- #
+    # ACCESSOR                                                                   #
+    # -------------------------------------------------------------------------- #
     protected function imageUrl(): Attribute
     {
         return Attribute::make(

@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class ServicesFeatures extends Model
 {
 
-
     # -------------------------------------------------------------------------- #
     # CUSTOM TABLE                                                               #
     # -------------------------------------------------------------------------- #

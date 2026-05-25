@@ -22,7 +22,7 @@
             <div class="card-footer">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="text-left text-dark">
-                        <a href="" class="btn btn-outline-danger">
+                        <a href="{{ url('/') }}" class="btn btn-outline-danger">
                             <i class="fa-solid fa-tv mr-2"></i>Website Company Profile
                         </a>
                     </div>
