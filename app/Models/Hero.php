@@ -72,6 +72,29 @@ class Hero extends Model
 
 
     # -------------------------------------------------------------------------- #
+    # HELPERS                                                                    #
+    # -------------------------------------------------------------------------- #
+    public function keywords(): array
+    {
+        return array_filter([
+            $this->keywords_1,
+            $this->keywords_2,
+            $this->keywords_3,
+            $this->keywords_4,
+            $this->keywords_5,
+        ]);
+    }
+
+    public function cta(): array
+    {
+        return array_filter([
+            $this->cta_1,
+            $this->cta_2,
+        ]);
+    }
+
+
+    # -------------------------------------------------------------------------- #
     # ACCESSOR                                                                   #
     # -------------------------------------------------------------------------- #
     protected function imageUrl(): Attribute
