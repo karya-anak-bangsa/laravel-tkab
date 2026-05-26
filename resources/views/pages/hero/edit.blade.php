@@ -13,7 +13,10 @@
     {{-- FORM --}}
     {{-- ----------------------------------------------------------------------- --}}
     <x-pages.index-form>
-        <form action="{{-- route('admin.hero.update', $data->id_hero) --}}" method="POST" enctype="multipart/form-data">
+        <form
+            action="{{-- route('admin.hero.update', $data->id_hero) --}}"
+            method="POST"
+            enctype="multipart/form-data">
 
             @csrf
             @method('PUT')
@@ -26,9 +29,15 @@
                     <x-pages.form-input-text
                         label="Title"
                         name="title"
-                        :value='$data->title ?? null'
+                        :value='$data->title'
                         :required=true>
                     </x-pages.form-input-text>
+                    <x-pages.form-input-textarea
+                        label="Description"
+                        name="description"
+                        :value='$data->description'
+                        :required=true>
+                    </x-pages.form-input-textarea>
                 </div>
             </div>
 
@@ -104,16 +113,13 @@
             {{-- BUTTON --}}
             {{-- ----------------------------------------------------------------------- --}}
             <div class="row mb-0">
-                <div class="col-sm-2">
-                    <a href="" class="btn btn-block btn-secondary">
-                        <i class="fas fa-undo mr-2"></i>Back
-                    </a>
-                </div>
-                <div class="col-sm-2">
-                    <button type="submit" class="btn btn-block btn-warning">
-                        <i class="fas fa-edit mr-2"></i>Edit
-                    </button>
-                </div>
+                <x-pages.form-button-link
+                    buttonLink=""
+                    buttonColor="secondary" icon="fa-undo">Back
+                </x-pages.form-button-link>
+                <x-pages.form-button
+                    buttonType="submit" buttonColor="warning" icon="fa-edit">Edit
+                </x-pages.form-button>
             </div>
 
         </form>
