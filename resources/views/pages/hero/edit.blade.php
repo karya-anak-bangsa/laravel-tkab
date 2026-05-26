@@ -15,8 +15,9 @@
     <x-pages.index-form>
         <form
             action  = "{{ route('admin.hero.update', $data->id_hero) }}"
-            method  = "POST"
-            enctype = "multipart/form-data">
+            method  = "post"
+            enctype = "multipart/form-data"
+            class="confirm-submit">
 
             @csrf
             @method('PUT')
@@ -58,7 +59,7 @@
             {{-- ----------------------------------------------------------------------- --}}
             {{-- BUTTON --}}
             {{-- ----------------------------------------------------------------------- --}}
-            <div class="row mb-0">
+            <div class="row">
                 <div class="col-lg-2">
                     <a href="{{ route('admin.hero.index') }}" class="btn btn-block btn-secondary">
                         <i class="fas fa-undo mr-2"></i>Back
@@ -75,3 +76,4 @@
     </x-pages.index-form>
 
 @endsection
+@include('components.sweetalert.scripts-edit')

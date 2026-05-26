@@ -12,7 +12,7 @@
                     </div>
 
                     <h1 class="hero-title">{{ $hero->title }}</h1>
-                    <p class="hero-description">{{ $hero->description }}</p>
+                    <p class="hero-description">{!! $hero->description !!}</p>
 
                     {{-- Kami menghadirkan solusi teknologi modern melalui jasa pembuatan website, aplikasi mobile, serta program pelatihan IT intensif untuk mempersiapkan SDM siap kerja. --}}
                     {{-- Kami menghadirkan solusi digital modern yang membantu bisnis berkembang lebih cepat, efisien, dan siap menghadapi era teknologi. --}}

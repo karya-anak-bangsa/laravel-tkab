@@ -75,16 +75,17 @@
         {{-- scripts adminlte 3.2.0 --}}
         <script src="{{ asset('template-backend/adminlte-3.2.0/dist/js/adminlte.min.js') }}"></script>
 
-        {{-- scripts fontawesome 6.7.2 dan summernote-0.9.0 --}}
+        {{-- scripts fontawesome 6.7.2 --}}
         <script src="{{ asset('template-plugins/fontawesome-6.7.2/js/all.min.js') }}"></script>
         <script src="{{ asset('template-plugins/summernote-0.9.0/summernote-bs4.min.js') }}"></script>
         <script>
             $(document).ready(function() {
                 $('.summernote').summernote({
-                    height: 250,
+                    height: 300,
                 });
             });
         </script>
+
         @stack('scripts')
     </body>
 

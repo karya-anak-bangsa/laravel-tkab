@@ -1,6 +1,19 @@
 @extends('layouts.backend')
+
+{{-- push styles --}}
+@include('components.datatables.styles')
+@include('components.notify.styles')
+
+{{-- content --}}
 @section('nav-hero', 'active')
 @section('content')
+
+    @if (session('notify'))
+        <div id="notify-data"
+            data-status="{{ session('notify.type') }}"
+            data-text="{{ session('notify.message') }}">
+        </div>
+    @endif
 
     {{-- ----------------------------------------------------------------------- --}}
     {{-- CALLOUT --}}
@@ -29,7 +42,7 @@
         <x-slot:tbody>
             <tr>
                 <td class="text-left">{{ $data->title ?? '-' }}</td>
-                <td class="text-left">{{ $data->description ?? '-' }}</td>
+                <td class="text-left">{!! $data->description ?? '-' !!}</td>
                 <td class="text-left">
                     @foreach ($data->keywords() as $keyword)
                         <span class="badge badge-primary badge-custom mb-1">
@@ -64,3 +77,7 @@
     </x-pages.index-table>
 
 @endsection
+
+{{-- push scripts --}}
+@include('components.datatables.scripts')
+@include('components.notify.scripts')
