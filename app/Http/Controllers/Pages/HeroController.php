@@ -45,6 +45,13 @@ class HeroController extends Controller
         $validated = $request->validate([
             'title'         => ['required', 'string', 'max:255',],
             'description'   => ['nullable', 'string',],
+            'keywords_1'    => ['nullable', 'string', 'max:255',],
+            'keywords_2'    => ['nullable', 'string', 'max:255',],
+            'keywords_3'    => ['nullable', 'string', 'max:255',],
+            'keywords_4'    => ['nullable', 'string', 'max:255',],
+            'keywords_5'    => ['nullable', 'string', 'max:255',],
+            'cta_1'         => ['nullable', 'string', 'max:255',],
+            'cta_2'         => ['nullable', 'string', 'max:255',],
         ]);
 
         # ---------------------------------------------------------------------- #

@@ -19,7 +19,7 @@
     {{-- CALLOUT --}}
     {{-- ----------------------------------------------------------------------- --}}
     <x-pages.callout>
-        Informasi tentang PT. Teknologi Karya Anak Bangsa
+        The information about PT. Teknologi Karya Anak Bangsa
     </x-pages.callout>
 
     {{-- ----------------------------------------------------------------------- --}}

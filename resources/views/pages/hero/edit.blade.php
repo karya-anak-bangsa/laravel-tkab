@@ -6,7 +6,7 @@
     {{-- CALLOUT --}}
     {{-- ----------------------------------------------------------------------- --}}
     <x-pages.callout>
-        Informasi tentang PT. Teknologi Karya Anak Bangsa
+        The information about PT. Teknologi Karya Anak Bangsa
     </x-pages.callout>
 
     {{-- ----------------------------------------------------------------------- --}}
@@ -17,7 +17,7 @@
             action  = "{{ route('admin.hero.update', $data->id_hero) }}"
             method  = "post"
             enctype = "multipart/form-data"
-            class="confirm-submit">
+            class   = "confirm-submit">
 
             @csrf
             @method('PUT')
@@ -47,10 +47,70 @@
             {{-- ----------------------------------------------------------------------- --}}
             {{-- KEYWORDS --}}
             {{-- ----------------------------------------------------------------------- --}}
+            <div class="row">
+                <div class="col-lg-4">
+                    <x-pages.form-input-text
+                        label="First keyword"
+                        name="keywords_1"
+                        :value='$data->keywords_1'
+                        :required=false>
+                    </x-pages.form-input-text>
+                </div>
+                <div class="col-lg-4">
+                    <x-pages.form-input-text
+                        label="Second keyword"
+                        name="keywords_2"
+                        :value='$data->keywords_2'
+                        :required=false>
+                    </x-pages.form-input-text>
+                </div>
+                <div class="col-lg-4">
+                    <x-pages.form-input-text
+                        label="Third keyword"
+                        name="keywords_3"
+                        :value='$data->keywords_3'
+                        :required=false>
+                    </x-pages.form-input-text>
+                </div>
+                <div class="col-lg-4">
+                    <x-pages.form-input-text
+                        label="Fourth keyword"
+                        name="keywords_4"
+                        :value='$data->keywords_4'
+                        :required=false>
+                    </x-pages.form-input-text>
+                </div>
+                <div class="col-lg-4">
+                    <x-pages.form-input-text
+                        label="Fifth keyword"
+                        name="keywords_5"
+                        :value='$data->keywords_5'
+                        :required=false>
+                    </x-pages.form-input-text>
+                </div>
+            </div>
 
             {{-- ----------------------------------------------------------------------- --}}
             {{-- CTA --}}
             {{-- ----------------------------------------------------------------------- --}}
+            <div class="row">
+                <div class="col-lg-4">
+                    <x-pages.form-input-text
+                        label="Call to Action"
+                        name="cta_1"
+                        :value='$data->cta_1'
+                        :required=false>
+                    </x-pages.form-input-text>
+                </div>
+                <div class="col-lg-4">
+                    <x-pages.form-input-text
+                        label="Call to Action"
+                        name="cta_2"
+                        :value='$data->cta_2'
+                        :required=false>
+                    </x-pages.form-input-text>
+                </div>
+            </div>
 
             {{-- ----------------------------------------------------------------------- --}}
             {{-- IMAGE --}}
