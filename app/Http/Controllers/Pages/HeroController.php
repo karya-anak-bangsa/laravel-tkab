@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Pages;
 use App\Models\Hero;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class HeroController extends Controller
 {
@@ -37,7 +38,30 @@ class HeroController extends Controller
 
     public function update(Request $request, string $id)
     {
-        //
+
+        # ---------------------------------------------------------------------- #
+        # VALIDATION
+        # ---------------------------------------------------------------------- #
+        $validated = $request->validate([
+            'title'         => ['required', 'string', 'max:255',],
+            'description'   => ['nullable', 'string',],
+        ]);
+
+        # ---------------------------------------------------------------------- #
+        # FIND DATA dan UPDATE DATA
+        # ---------------------------------------------------------------------- #
+        $data = Hero::findOrFail($id);
+        $data->update($validated);
+
+        # ---------------------------------------------------------------------- #
+        # REDIRECT
+        # ---------------------------------------------------------------------- #
+        return redirect()
+            ->route('admin.hero.index')
+            ->with('notify', [
+                'type'      => 'success',
+                'message'   => 'Data successfully updated.',
+            ]);
     }
 
     public function destroy(string $id)
