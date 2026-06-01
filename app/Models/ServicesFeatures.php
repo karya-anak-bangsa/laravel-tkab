@@ -26,7 +26,7 @@ class ServicesFeatures extends Model
 
 
     # -------------------------------------------------------------------------- #
-    # Mass Assignment                                                            #
+    # MASS ASSIGNMENT
     # -------------------------------------------------------------------------- #
     protected $fillable = [
         'id_services',

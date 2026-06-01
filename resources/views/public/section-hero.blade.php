@@ -4,10 +4,11 @@
 
             <div class="col-lg-6">
                 <div class="hero-content pe-0 pe-lg-5">
-                    <div class="hero-badge">
+
+                    {{-- <div class="hero-badge">
                         <i class="bi bi-lightning-fill"></i>
-                        <span>IT Solutions for Your Business Continuity</span>
-                    </div>
+                        <span>Solusi IT Terbaik untuk Kelangsungan Bisnis Anda</span>
+                    </div> --}}
 
                     <h1 class="hero-title">{{ $hero->title }}</h1>
                     <p class="hero-description">{!! $hero->description !!}</p>

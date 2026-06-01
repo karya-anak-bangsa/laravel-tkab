@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('tech_stack')->nullable();
-            $table->string('slug')->nullable();
+            $table->string('slug')->nullable()->unique();
 
             # other columns
             $table->integer('sort_order')->default(0);

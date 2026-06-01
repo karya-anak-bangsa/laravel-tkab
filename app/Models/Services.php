@@ -25,7 +25,9 @@ class Services extends Model
     protected $keyType      = 'int';
     public $incrementing    = true;
 
-    # ...
+    # -------------------------------------------------------------------------- #
+    # MASS ASSIGNMENT
+    # -------------------------------------------------------------------------- #
     protected $fillable = [
         'icon',
         'category',
