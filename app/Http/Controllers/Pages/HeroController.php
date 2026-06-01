@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Pages;
 use App\Models\Hero;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Storage;
 
 class HeroController extends Controller
 {
@@ -45,6 +45,7 @@ class HeroController extends Controller
         $validated = $request->validate([
             'title'         => ['required', 'string', 'max:255',],
             'description'   => ['nullable', 'string',],
+            'image'         => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096',],
             'keywords_1'    => ['nullable', 'string', 'max:255',],
             'keywords_2'    => ['nullable', 'string', 'max:255',],
             'keywords_3'    => ['nullable', 'string', 'max:255',],
@@ -53,6 +54,13 @@ class HeroController extends Controller
             'cta_1'         => ['nullable', 'string', 'max:255',],
             'cta_2'         => ['nullable', 'string', 'max:255',],
         ]);
+
+        # ---------------------------------------------------------------------- #
+        # UPLOAD IMAGE
+        # ---------------------------------------------------------------------- #
+        if ($request->hasFile('image')) {
+            $validated['image'] = $request->file('image')->store('hero', 'public');
+        }
 
         # ---------------------------------------------------------------------- #
         # FIND DATA dan UPDATE DATA

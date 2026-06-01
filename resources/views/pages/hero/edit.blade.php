@@ -13,8 +13,7 @@
     {{-- FORM --}}
     {{-- ----------------------------------------------------------------------- --}}
     <x-pages.index-form>
-        <form
-            action  = "{{ route('admin.hero.update', $data->id_hero) }}"
+        <form action  = "{{ route('admin.hero.update', $data->id_hero) }}"
             method  = "post"
             enctype = "multipart/form-data"
             class   = "confirm-submit">
@@ -25,7 +24,7 @@
             {{-- ----------------------------------------------------------------------- --}}
             {{-- MAIN CONTENT --}}
             {{-- ----------------------------------------------------------------------- --}}
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-lg-12">
                     <x-pages.form-input-text
                         label="Title"
@@ -42,12 +41,20 @@
                         :required=true>
                     </x-pages.form-input-textarea>
                 </div>
+                <div class="col-lg-12">
+                    <x-pages.form-input-file
+                        label="Hero Image"
+                        name="image"
+                        :value='$data->image_url'
+                        :required=true>
+                    </x-pages.form-input-file>
+                </div>
             </div>
 
             {{-- ----------------------------------------------------------------------- --}}
             {{-- KEYWORDS --}}
             {{-- ----------------------------------------------------------------------- --}}
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-lg-4">
                     <x-pages.form-input-text
                         label="First keyword"
@@ -93,7 +100,7 @@
             {{-- ----------------------------------------------------------------------- --}}
             {{-- CTA --}}
             {{-- ----------------------------------------------------------------------- --}}
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-lg-4">
                     <x-pages.form-input-text
                         label="Call to Action"
@@ -113,13 +120,9 @@
             </div>
 
             {{-- ----------------------------------------------------------------------- --}}
-            {{-- IMAGE --}}
-            {{-- ----------------------------------------------------------------------- --}}
-
-            {{-- ----------------------------------------------------------------------- --}}
             {{-- BUTTON --}}
             {{-- ----------------------------------------------------------------------- --}}
-            <div class="row">
+            <div class="row mb-0">
                 <div class="col-lg-2">
                     <a href="{{ route('admin.hero.index') }}" class="btn btn-block btn-secondary">
                         <i class="fas fa-undo mr-2"></i>Back

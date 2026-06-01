@@ -16,12 +16,12 @@ class FormInputFile extends Component
     public function __construct(
         $label              = null,
         $name               = null,
-        $value            = null,
+        $value              = null,
         $required           = false,
     ) {
         $this->label        = $label;
         $this->name         = $name;
-        $this->value      = $value;
+        $this->value        = $value;
         $this->required     = $required;
     }
 
