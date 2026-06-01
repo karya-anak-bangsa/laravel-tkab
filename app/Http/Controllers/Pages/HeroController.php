@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Pages;
 use App\Models\Hero;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class HeroController extends Controller
 {

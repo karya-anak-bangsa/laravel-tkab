@@ -29,8 +29,8 @@ class ServicesSeeder extends Seeder
             # web development                                                            #
             # -------------------------------------------------------------------------- #
             [
-                'icon'         => 'bi bi-code-slash',
-                'category'     => 'WEB SOLUTIONS',
+                'icon'         => 'bi bi-display',
+                'category'     => 'SOFTWARE DEVELOPMENT',
                 'title'        => 'Custom Web Development',
                 'description'  => 'Kami membantu bisnis membangun website dan sistem web modern yang cepat, responsif, aman, dan scalable sesuai kebutuhan perusahaan Anda.',
                 'tech_stack'   => 'Laravel • ReactJS • NodeJS • Bootstrap • MySQL',
@@ -50,8 +50,8 @@ class ServicesSeeder extends Seeder
             # -------------------------------------------------------------------------- #
             [
                 'icon'         => 'bi bi-phone',
-                'category'     => 'MOBILE APPS',
-                'title'        => 'Android & iOS Development',
+                'category'     => 'SOFTWARE DEVELOPMENT',
+                'title'        => 'Android & IOS Development',
                 'description'  => 'Pengembangan aplikasi mobile modern untuk Android dan iOS dengan performa tinggi, user experience optimal, dan integrasi sistem yang fleksibel.',
                 'tech_stack'   => 'Flutter • Firebase • REST API',
                 'slug'         => Str::slug('Android & iOS Development'),
@@ -70,8 +70,8 @@ class ServicesSeeder extends Seeder
             # -------------------------------------------------------------------------- #
             [
                 'icon'         => 'bi bi-mortarboard',
-                'category'     => 'IT EDUCATION',
-                'title'        => 'Training & IT Bootcamp',
+                'category'     => 'LEARNING CENTER',
+                'title'        => 'IT Training & IT Bootcamp',
                 'description'  => 'Program pelatihan dan bootcamp IT untuk siswa, mahasiswa, maupun perusahaan yang ingin meningkatkan skill digital dan teknologi modern.',
                 'tech_stack'   => 'Laravel • Flutter • Git • UI/UX',
                 'slug'         => Str::slug('Training & IT Bootcamp'),
@@ -104,7 +104,6 @@ class ServicesSeeder extends Seeder
             ]);
 
             foreach ($serviceData['features'] as $index => $feature) {
-
                 ServicesFeatures::create([
                     'id_services' => $service->id_services,
                     'features'    => $feature,

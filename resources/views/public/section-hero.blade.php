@@ -15,7 +15,7 @@
                     <div class="hero-features">
                         @foreach ($hero->keywords() as $keywords)
                             <div class="feature-item">
-                                <i class="bi bi-bell-fill"></i>
+                                <i class="bi bi-rocket-takeoff-fill"></i>
                                 <span>{{ $keywords }}</span>
                             </div>
                         @endforeach

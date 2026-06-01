@@ -1,7 +1,7 @@
 <section id="services" class="services section">
 
     <div class="container section-title">
-        <h2>Services</h2>
+        <h2>Our Business Solutions</h2>
         <p>Diskusikan kebutuhan website, aplikasi mobile, atau pelatihan IT bersama tim kami.</p>
     </div>
 
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="service-card-footer">
-                            <span class="service-link">
+                            <span class="service-link badge text-bg-success">
                                 {{ $service->tech_stack }}
                             </span>
                         </div>
