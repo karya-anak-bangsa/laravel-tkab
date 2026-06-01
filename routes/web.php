@@ -6,6 +6,7 @@ use App\Http\Controllers\Public\LandingPageController;
 # halaman Backend Admin
 use App\Http\Controllers\Pages\DashboardController;
 use App\Http\Controllers\Pages\HeroController;
+use App\Http\Controllers\Pages\ServicesController;
 
 # Other
 use Illuminate\Support\Facades\Route;
@@ -25,4 +26,5 @@ Route::prefix('admin')->name('admin.')
 
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('hero', HeroController::class);
+        Route::resource('services', ServicesController::class);
     });

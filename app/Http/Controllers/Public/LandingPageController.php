@@ -16,7 +16,6 @@ class LandingPageController extends Controller
 
         # Query untuk menampilkan data dari database
         $hero = Hero::first();
-        // $services = Services::query()->with('activeServicesFeatures')->active()->ordered()->get();
         $services = Services::with('activeServicesFeatures')->active()->ordered()->get();
 
         # return values
