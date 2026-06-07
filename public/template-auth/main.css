@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+:root {
+    --default-font: "Quicksand", "Segoe UI", sans-serif;
+    --heading-font: "Josefin Sans", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+    --dashboard-font: "Roboto", sans-serif;
+}
+
+:root {
+    --color-500: #ffb703; /* Medium */
+    --color-700: #f0a500; /* Bold */
+    --color-default: #fec107; /* Normal */
+}
+
+body {
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    font-family: var(--default-font);
+}
+
+span,
+p {
+    font-family: var(--default-font);
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* LEFT SIDE */
+/* ------------------------------------------------------------------------------------------------- */
+#auth-left {
+    min-height: 100vh;
+    background-color: #161c34;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* RIGHT SIDE */
+/* ------------------------------------------------------------------------------------------------- */
+#auth-right {
+    min-height: 100vh;
+    background-color: aliceblue;
+}
