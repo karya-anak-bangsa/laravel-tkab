@@ -8,9 +8,9 @@
 }
 
 :root {
-    --color-500: #ffb703; /* Medium */
-    --color-700: #f0a500; /* Bold */
-    --color-default: #fec107; /* Normal */
+    --color-500: #161c34; /* Medium */
+    --color-700: #161c34; /* Bold */
+    --color-default: #161c34; /* Normal */
 }
 
 body {
@@ -23,7 +23,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--heading-font);
     font-family: var(--default-font);
 }
 
@@ -46,4 +45,17 @@ p {
 #auth-right {
     min-height: 100vh;
     background-color: aliceblue;
+}
+
+#auth-card {
+    width: 90%;
+    height: auto;
+}
+
+.btn-login {
+    /* background-color: #161c34; */
+    font-weight: bold;
+    font-family: var(--default-font);
+    padding: 0.55rem 0.55rem;
+    /* color: #ffffff; */
 }

@@ -39,15 +39,42 @@
 
                     <div class="text-center">
                         <div class="mb-3">
-                            <img src="{{ asset('img/laravel-merah.png') }}" style="height:90px">
+                            <img src="{{ asset('img/laravel-merah.png') }}" class="img-fluid" style="height:90px">
                         </div>
                         <div class="mb-5">
                             <h3 class="fw-bold">PT. Teknologi Karya Anak Bangsa</h3>
-                            <span class="text-muted">
-                                Solusi IT Terbaik untuk Keberlanjutan Bisnis Anda
-                            </span>
                         </div>
                     </div>
+
+                    <div class="card" id="auth-card">
+                        <div class="card-body">
+                            <form action="" method="post">
+                                @csrf
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                        <input type="email" class="form-control" name="email" id="email" autocomplete="email">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="fas fa-eye"></i></span>
+                                        <input type="password" class="form-control" name="password" id="password">
+                                    </div>
+                                    <small class="text-danger">Password minimum 8 characters</small>
+                                </div>
+                                <div class="mb-0">
+                                    <button type="submit" class="btn btn-login btn-success">
+                                        <span><i class="fas fa-paper-plane me-2"></i>Login</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        {{-- card-body --}}
+                    </div>
+                    {{-- card --}}
 
                 </div>
                 {{-- col --}}
