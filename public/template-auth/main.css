@@ -26,6 +26,7 @@ h6 {
     font-family: var(--default-font);
 }
 
+small,
 span,
 p {
     font-family: var(--default-font);
@@ -36,7 +37,13 @@ p {
 /* ------------------------------------------------------------------------------------------------- */
 #auth-left {
     min-height: 100vh;
-    background-color: #161c34;
+    background-color: var(--color-default);
+
+    /* background-image: url("../img/logo-1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; */
 }
 
 /* ------------------------------------------------------------------------------------------------- */
@@ -50,12 +57,33 @@ p {
 #auth-card {
     width: 90%;
     height: auto;
+    border-radius: 0.5rem;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    border-radius: 0.5rem;
+    padding: 0.55rem 0.55rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--warning-default);
+    box-shadow: 0 0 0 0.1rem rgba(254, 193, 7, 0.25);
 }
 
 .btn-login {
-    /* background-color: #161c34; */
     font-weight: bold;
     font-family: var(--default-font);
+    border-radius: 0.5rem;
     padding: 0.55rem 0.55rem;
-    /* color: #ffffff; */
+}
+
+.btn-warning:hover {
+    background-color: var(--warning-600);
+    border-color: var(--warning-600);
 }
