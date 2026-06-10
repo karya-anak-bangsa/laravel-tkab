@@ -18,9 +18,9 @@ return new class extends Migration
             $table->text('description');
             $table->string('tech_stack')->nullable();
             $table->string('slug')->nullable()->unique();
+            $table->integer('sort_order')->default(0);
 
             # other columns
-            $table->integer('sort_order')->default(0);
             $table->enum('status_data', ['Active', 'Not Active'])->default('Active');
             $table->timestamps();
             $table->softDeletes();

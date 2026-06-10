@@ -86,7 +86,7 @@
 
                 <div class="col-lg-6">
                     <div class="copyright">
-                        <p><span class="sitename">© Copyright 2023 - PT. Teknologi Karya Anak Bangsa. All rights reserved.</span></p>
+                        <p><span class="sitename">© Copyright 2023 - All rights reserved.</span></p>
                     </div>
                 </div>
 

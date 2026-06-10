@@ -6,5 +6,5 @@
     @include('public.section-portfolio')
     @include('public.section-learning-center')
     @include('public.section-faq')
-    @include('public.section-contact')
+    {{-- @include('public.section-contact') --}}
 @endsection

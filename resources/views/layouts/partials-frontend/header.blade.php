@@ -1,7 +1,9 @@
 <div class="container d-flex align-items-center justify-content-between position-relative">
 
     <a href="" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="{{ asset('img/laravel-merah.png') }}" alt="">
+        {{-- <img src="{{ asset('img/logo-1.png') }}" alt=""> --}}
+        <h1 class="sitename">TKAB</h1>
+
     </a>
 
     <nav id="navmenu" class="navmenu">

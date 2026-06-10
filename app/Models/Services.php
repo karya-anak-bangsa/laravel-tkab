@@ -11,7 +11,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Services extends Model
 {
 
-
     # -------------------------------------------------------------------------- #
     # CUSTOM TABLE                                                               #
     # -------------------------------------------------------------------------- #
