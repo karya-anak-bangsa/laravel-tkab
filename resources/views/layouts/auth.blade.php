@@ -2,7 +2,6 @@
 <html lang="en">
 
     <head>
-
         {{-- set metadata on this website --}}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,53 +28,21 @@
     </head>
 
     <body>
-
         <main class="container-fluid">
             <div class="row min-vh-100">
                 <div class="col-lg-7 d-flex flex-column align-items-center justify-content-center p-0" id="auth-left">
-
+                    {{-- Image background masih dalam tahap desain --}}
                 </div>
                 <div class="col-lg-5 d-flex flex-column align-items-center justify-content-center p-0" id="auth-right">
-
                     <div class="text-center">
                         <div class="mb-3">
-                            <img src="{{ asset('img/laravel-hitam.png') }}" class="img-fluid" style="height:120px">
+                            <img src="{{ asset('img/laravel-hitam.png') }}" class="img-fluid" style="height:90px">
                         </div>
                         <div class="mb-5">
-                            <h3 class="fw-bold">PT. Teknologi Karya Anak Bangsa</h3>
+                            <h3>PT. Teknologi Karya Anak Bangsa</h3>
                         </div>
                     </div>
-
-                    <div class="card" id="auth-card">
-                        <div class="card-body">
-                            <form action="" method="post">
-                                @csrf
-                                <div class="mb-4">
-                                    <label for="email" class="form-label">Email</label>
-                                    <div class="input-group">
-                                        <input type="email" class="form-control" name="email" id="email" autocomplete="email">
-                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <label for="password" class="form-label">Password</label>
-                                    <div class="input-group">
-                                        <input type="password" class="form-control" name="password" id="password">
-                                        <span class="input-group-text"><i class="fas fa-eye"></i></span>
-                                    </div>
-                                    <small class="text-danger">Password minimum 8 characters</small>
-                                </div>
-                                <div class="mb-0">
-                                    <button type="submit" class="btn btn-login btn-secondary w-100">
-                                        <span><i class="fas fa-paper-plane me-2"></i>Login</span>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                        {{-- card-body --}}
-                    </div>
-                    {{-- card --}}
-
+                    @yield('content')
                 </div>
                 {{-- col --}}
             </div>

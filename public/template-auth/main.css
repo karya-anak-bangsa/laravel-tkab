@@ -1,16 +1,14 @@
 @charset "UTF-8";
 
 :root {
-    --default-font: "Quicksand", "Segoe UI", sans-serif;
+    --default-font: "Quicksand", "Roboto", "Segoe UI", sans-serif;
     --heading-font: "Josefin Sans", sans-serif;
     --nav-font: "Poppins", sans-serif;
-    --dashboard-font: "Roboto", sans-serif;
 }
 
 :root {
-    --color-500: #161c34; /* Medium */
-    --color-700: #161c34; /* Bold */
-    --color-default: #161c34; /* Normal */
+    --color-dark: #161c34;
+    --color-light: #f5f6fa;
 }
 
 body {
@@ -23,6 +21,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-weight: 700;
     font-family: var(--default-font);
 }
 
@@ -37,13 +36,7 @@ p {
 /* ------------------------------------------------------------------------------------------------- */
 #auth-left {
     min-height: 100vh;
-    background-color: var(--color-default);
-
-    /* background-image: url("../img/logo-1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative; */
+    background-color: var(--color-dark);
 }
 
 /* ------------------------------------------------------------------------------------------------- */
@@ -51,13 +44,14 @@ p {
 /* ------------------------------------------------------------------------------------------------- */
 #auth-right {
     min-height: 100vh;
-    background-color: aliceblue;
+    background-color: var(--color-light);
 }
 
 #auth-card {
-    width: 90%;
+    width: 95%;
     height: auto;
     border-radius: 0.5rem;
+    box-shadow: 0 10px 75px rgba(0, 0, 0, 0.05);
 }
 
 .form-label {

@@ -2,6 +2,7 @@
 
 # halaman auth
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 # halaman frontend
 use App\Http\Controllers\Public\LandingPageController;
@@ -17,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 # ------------------------------------------------------------------------------------------------- #
 # Route Halaman Auth
 # ------------------------------------------------------------------------------------------------- #
-Route::get('/admin-tkab', [LoginController::class, 'index'])->name('login');
+Route::get('/tkab-login', [LoginController::class, 'index'])->name('login');
+Route::get('/tkab-register', [RegisterController::class, 'index'])->name('register');
 
 # ------------------------------------------------------------------------------------------------- #
 # Route Halaman Frontend
