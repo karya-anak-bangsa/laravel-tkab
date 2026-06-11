@@ -27,7 +27,8 @@ h6 {
 
 small,
 span,
-p {
+p,
+a {
     font-family: var(--default-font);
 }
 
