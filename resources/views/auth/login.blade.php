@@ -16,7 +16,7 @@
 
     <div class="card" id="auth-card">
         <div class="card-body">
-            <form action="" method="post">
+            <form action="{{ route('login.process') }}" method="post" enctype="multipart/form-data" class="confirm-submit">
                 @csrf
                 <div class="row">
                     <div class="col-lg-12 mb-4">
@@ -53,3 +53,9 @@
 
 {{-- push scripts --}}
 @include('components.notify.scripts')
+@include('components.sweetalert.scripts-alert', [
+    'title' => 'Sign In?',
+    'text' => 'Please confirm to continue to your account.',
+    'icon' => 'question',
+    'confirmButtonText' => 'Yes, Sign In',
+])

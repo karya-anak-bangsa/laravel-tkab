@@ -51,7 +51,6 @@
                         @error('password')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
-                        {{-- <small class="text-danger">The password must be at least 8 characters long</small> --}}
                     </div>
                     <div class="col-lg-12 mb-0">
                         <button type="submit" class="btn btn-login btn-secondary w-100">
@@ -67,4 +66,9 @@
     {{-- card --}}
 
 @endsection
-@include('components.sweetalert.scripts-create')
+@include('components.sweetalert.scripts-alert', [
+    'title' => 'Create Account?',
+    'text' => 'Please confirm to continue the registration process.',
+    'icon' => 'question',
+    'confirmButtonText' => 'Yes, Sign Up',
+])
