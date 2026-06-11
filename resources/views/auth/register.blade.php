@@ -8,17 +8,7 @@
             <form action="{{ route('register.store') }}" method="post" enctype="multipart/form-data" class="confirm-submit">
                 @csrf
                 <div class="row">
-                    <div class="col-lg-6 mb-3">
-                        <label for="full_name" class="form-label">Full Name</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="full_name" id="full_name">
-                            <span class="input-group-text"><i class="fas fa-user-graduate"></i></span>
-                        </div>
-                        @error('full_name')
-                            <small class="text-danger">{{ $message }}</small>
-                        @enderror
-                    </div>
-                    <div class="col-lg-6 mb-3">
+                    <div class="col-lg-12 mb-3">
                         <label for="role" class="form-label">Role</label>
                         <div class="input-group">
                             <select class="form-select" name="role" id="role">
@@ -29,6 +19,16 @@
                             <span class="input-group-text"><i class="fas fa-user-gear"></i></span>
                         </div>
                         @error('role')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                        <label for="full_name" class="form-label">Full Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="full_name" id="full_name">
+                            <span class="input-group-text"><i class="fas fa-user-graduate"></i></span>
+                        </div>
+                        @error('full_name')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>

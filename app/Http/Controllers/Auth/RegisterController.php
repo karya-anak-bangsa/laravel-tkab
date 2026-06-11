@@ -35,7 +35,7 @@ class RegisterController extends Controller
         return redirect()
             ->route('login')
             ->with('notify', [
-                'type'      => 'info',
+                'type'      => 'success',
                 'message'   => 'Registration Successful.',
             ]);
     }
