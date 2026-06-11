@@ -22,9 +22,12 @@
                     <div class="col-lg-12 mb-4">
                         <label for="email" class="form-label">Email</label>
                         <div class="input-group">
-                            <input type="email" class="form-control" name="email" id="email" autocomplete="email">
+                            <input type="email" class="form-control" name="email" id="email" autocomplete="email" value="{{ old('email') }}">
                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                         </div>
+                        @error('email')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </div>
                     <div class="col-lg-12 mb-4">
                         <label for="password" class="form-label">Password</label>
@@ -32,6 +35,9 @@
                             <input type="password" class="form-control" name="password" id="password">
                             <span class="input-group-text"><i class="fas fa-eye"></i></span>
                         </div>
+                        @error('password')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </div>
                     <div class="col-lg-12 mb-0">
                         <button type="submit" class="btn btn-login btn-secondary w-100">
