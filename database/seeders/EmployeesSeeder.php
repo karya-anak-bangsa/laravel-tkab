@@ -20,12 +20,12 @@ class EmployeesSeeder extends Seeder
             'status_data'   => 'Active',
         ]);
 
-        Employees::create([
-            'full_name'     => 'Aryajaya Alamsyah',
-            'role'          => 'Senior Programmer',
-            'email'         => 'aryajayaalamsyah@gmail.com',
-            'password'      => Hash::make('12341234'),
-            'status_data'   => 'Active',
-        ]);
+        // Employees::create([
+        //     'full_name'     => 'Aryajaya Alamsyah',
+        //     'role'          => 'Senior Programmer',
+        //     'email'         => 'aryajayaalamsyah@gmail.com',
+        //     'password'      => Hash::make('12341234'),
+        //     'status_data'   => 'Active',
+        // ]);
     }
 }

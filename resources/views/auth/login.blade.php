@@ -1,5 +1,19 @@
 @extends('layouts.auth')
+
+{{-- push styles --}}
+@include('components.notify.styles')
+
+{{-- content --}}
+@section('nav-login', 'active')
 @section('content')
+
+    @if (session('notify'))
+        <div id="notify-data"
+            data-status="{{ session('notify.type') }}"
+            data-text="{{ session('notify.message') }}">
+        </div>
+    @endif
+
     <div class="card" id="auth-card">
         <div class="card-body">
             <form action="" method="post">
@@ -18,7 +32,6 @@
                             <input type="password" class="form-control" name="password" id="password">
                             <span class="input-group-text"><i class="fas fa-eye"></i></span>
                         </div>
-                        <small class="text-danger">The password must be at least 8 characters long</small>
                     </div>
                     <div class="col-lg-12 mb-0">
                         <button type="submit" class="btn btn-login btn-secondary w-100">
@@ -37,3 +50,6 @@
         <a href="{{ route('register') }}" class="text-dark fw-bold">Create an account</a>
     </div>
 @endsection
+
+{{-- push scripts --}}
+@include('components.notify.scripts')

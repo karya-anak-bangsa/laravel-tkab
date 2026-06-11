@@ -38,7 +38,7 @@
                         <div class="mb-3">
                             <img src="{{ asset('img/laravel-hitam.png') }}" class="img-fluid" style="height:90px">
                         </div>
-                        <div class="mb-5">
+                        <div class="mb-4">
                             <h3>PT. Teknologi Karya Anak Bangsa</h3>
                         </div>
                     </div>
