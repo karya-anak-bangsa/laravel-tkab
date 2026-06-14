@@ -10,12 +10,12 @@
             <div class="card-body">
                 <table class="table border-bottom">
                     <tr>
-                        <td width="20%" class="text-bold">Nama Lengkap</td>
-                        <td width="80%" class="text-dark">Aryajaya Alamsyah, S.Kom., M.Kom.</td>
+                        <td width="20%" class="text-bold">Full Name</td>
+                        <td width="80%" class="text-bold">{{ auth()->user()->full_name }}</td>
                     </tr>
                     <tr>
-                        <td width="20%" class="text-bold">Jabatan</td>
-                        <td width="80%" class="text-dark">Senior Developer</td>
+                        <td width="20%" class="text-bold">Role and Position</td>
+                        <td width="80%" class="text-bold">{{ auth()->user()->role }}</td>
                     </tr>
                 </table>
             </div>
@@ -23,7 +23,7 @@
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="text-left text-dark">
                         <a href="{{ url('/') }}" class="btn btn-outline-danger">
-                            <i class="fa-solid fa-tv mr-2"></i>Website Company Profile
+                            <i class="fa-solid fa-tv mr-2"></i>Back to Landing Pages
                         </a>
                     </div>
                     <div class="text-right text-muted">

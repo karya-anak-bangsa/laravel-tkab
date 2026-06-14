@@ -10,6 +10,9 @@
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
+        {{-- --------------------------------------------------------------------------
+        Main Dashboard
+        -------------------------------------------------------------------------- --}}
         <li class="nav-item">
             <a href="{{ route('admin.dashboard') }}" class="nav-link @yield('nav-dashboard')">
                 <i class="nav-icon fa-solid fa-building-columns"></i>
@@ -17,6 +20,9 @@
             </a>
         </li>
 
+        {{-- --------------------------------------------------------------------------
+        Company Profile
+        -------------------------------------------------------------------------- --}}
         <li class="nav-header mt-2">COMPANY PROFILE</li>
         <li class="nav-item">
             <a href="{{ route('admin.hero.index') }}" class="nav-link @yield('nav-hero')">
@@ -54,14 +60,5 @@
                 <p>Contact</p>
             </a>
         </li>
-
-        <li class="nav-header mt-2">LOGOUT</li>
-        <li class="nav-item">
-            <a href="" class="nav-link @yield('nav-logout')">
-                <i class="nav-icon fa-solid fa-right-from-bracket"></i>
-                <p>Logout</p>
-            </a>
-        </li>
-
     </ul>
 </nav>

@@ -34,7 +34,8 @@ Route::get('/', [LandingPageController::class, 'index'])->name('home');
 # ------------------------------------------------------------------------------------------------- #
 # Route Halaman Backend
 # ------------------------------------------------------------------------------------------------- #
-Route::prefix('admin')->name('admin.')
+
+Route::middleware('auth:employees')->prefix('admin')->name('admin.')
     ->group(function () {
 
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

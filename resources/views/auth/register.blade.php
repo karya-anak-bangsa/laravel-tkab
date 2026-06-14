@@ -46,7 +46,9 @@
                         <label for="password" class="form-label">Password</label>
                         <div class="input-group">
                             <input type="password" class="form-control" name="password" id="password">
-                            <span class="input-group-text"><i class="fas fa-eye"></i></span>
+                            <span class="input-group-text" id="togglePassword">
+                                <i class="fas fa-eye" id="eyeIcon"></i>
+                            </span>
                         </div>
                         @error('password')
                             <small class="text-danger">{{ $message }}</small>
@@ -66,6 +68,7 @@
     {{-- card --}}
 
 @endsection
+@include('components.password.scripts')
 @include('components.sweetalert.scripts-alert', [
     'title' => 'Create Account?',
     'text' => 'Please confirm to continue the registration process.',

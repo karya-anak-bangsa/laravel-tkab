@@ -1,9 +1,17 @@
 @extends('layouts.backend')
+
+{{-- push styles --}}
+@include('components.notify.styles')
+@include('components.datatables.styles')
+
+{{-- content --}}
 @section('nav-dashboard', 'active')
 @section('content')
 
+    @include('components.notify.alert')
+
     <x-pages.dashboard-profile
-        title="Selamat Datang di Halaman Administrator">
+        title="Welcome to Dashboard Administrator">
     </x-pages.dashboard-profile>
 
     <div class="row">
@@ -19,3 +27,7 @@
     {{-- row --}}
 
 @endsection
+
+{{-- push scripts --}}
+@include('components.notify.scripts')
+@include('components.datatables.scripts')

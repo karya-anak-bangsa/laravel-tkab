@@ -15,21 +15,25 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+        # Proses validasi input dari form login
         $credentials = $request->validate([
             'email'     => ['required', 'email'],
             'password'  => ['required'],
         ]);
 
 
+        # Proses autentikasi.
+        # Jika email + password sesuai maka akan berpindah ke halaman dashboard
         if (Auth::guard('employees')->attempt($credentials)) {
             $request->session()->regenerate();
             return redirect()->route('admin.dashboard')
                 ->with('notify', [
                     'type'      => 'success',
-                    'message'   => 'Welcome to PT. Teknologi Karya Anak Bangsa.',
+                    'message'   => 'Welcome to Dashboard Administrator.',
                 ]);
         }
 
+        # Jika email + password tidak sesuai maka akan muncul notify "Invalid email or password"
         return back()->withInput($request->only('email'))
             ->with('notify', [
                 'type'      => 'error',
@@ -47,7 +51,7 @@ class LoginController extends Controller
         return redirect()
             ->route('login')
             ->with('notify', [
-                'type'      => 'success',
+                'type'      => 'error',
                 'message'   => 'You have been logged out.',
             ]);
     }
