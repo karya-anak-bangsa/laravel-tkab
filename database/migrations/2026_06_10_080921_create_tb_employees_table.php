@@ -16,6 +16,11 @@ return new class extends Migration
             $table->string('role')->nullable(); # Junior Programmer, Senior programmer
 
             # ...
+            $table->string('otp_code')->nullable();
+            $table->timestamp('otp_expired_at')->nullable();
+            $table->timestamp('otp_verified_at')->nullable();
+
+            # ...
             $table->string('email')->unique();
             $table->string('password');
 
