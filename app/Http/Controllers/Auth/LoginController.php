@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\Employees;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
@@ -21,6 +22,28 @@ class LoginController extends Controller
             'password'  => ['required'],
         ]);
 
+        $employees = Employees::where(
+            'email',
+            $credentials['email']
+        )->first();
+
+        if (!$employees) {
+            return back()
+                ->withInput($request->only('email'))
+                ->with('notify', [
+                    'type'      => 'error',
+                    'message'   => 'Invalid email or password.',
+                ]);
+        }
+
+        if (!$employees->hasOtpVerified()) {
+            return back()
+                ->withInput($request->only('email'))
+                ->with('notify', [
+                    'type'      => 'warning',
+                    'message'   => 'Please verify your email first.',
+                ]);
+        }
 
         # Proses autentikasi.
         # Jika email + password sesuai maka akan berpindah ke halaman dashboard

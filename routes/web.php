@@ -24,14 +24,11 @@ Route::post('/tkab-register', [RegisterController::class, 'store'])->name('regis
 
 Route::get('/verify-email/{id}', [VerifyEmailController::class, 'create'])->name('verify.email.create');
 Route::post('/verify-email/{id}', [VerifyEmailController::class, 'store'])->name('verify.email.store');
+Route::post('/verify-email/{id}/resend', [VerifyEmailController::class, 'resend'])->name('verify.email.resend');
 
 Route::get('/tkab-login', [LoginController::class, 'index'])->name('login');
 Route::post('/tkab-login', [LoginController::class, 'login'])->name('login.process');
 Route::post('/tkab-logout', [LoginController::class, 'logout'])->name('logout');
-
-// Route::get('/verify-email/{id}', ...)->name('verify.email.view');
-// Route::post('/verify-email/{id}', ...)->name('verify.email.process');
-// Route::get('/otp', [OtpController::class, 'create'])->name('otp');
 
 
 # ------------------------------------------------------------------------------------------------- #
