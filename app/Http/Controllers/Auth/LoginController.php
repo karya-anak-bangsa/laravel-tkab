@@ -22,11 +22,7 @@ class LoginController extends Controller
             'password'  => ['required'],
         ]);
 
-        $employees = Employees::where(
-            'email',
-            $credentials['email']
-        )->first();
-
+        $employees = Employees::where('email', $credentials['email'])->first();
         if (!$employees) {
             return back()
                 ->withInput($request->only('email'))

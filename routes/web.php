@@ -40,13 +40,13 @@ Route::get('/', [LandingPageController::class, 'index'])->name('home');
 # ------------------------------------------------------------------------------------------------- #
 # Route Halaman Backend
 # ------------------------------------------------------------------------------------------------- #
-Route::middleware('auth:employees')->prefix('admin')->name('admin.')
+
+Route::middleware(['auth:employees', 'verified.employee',])->prefix('admin')->name('admin.')
     ->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::resource('hero', HeroController::class);
         Route::resource('services', ServicesController::class);
     });
-
 
 # ------------------------------------------------------------------------------------------------- #
 # Testing SMPT
