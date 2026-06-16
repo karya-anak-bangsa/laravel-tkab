@@ -1,8 +1,9 @@
 <?php
 
 # halaman auth
-use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\OtpController;
 
 # halaman frontend
 use App\Http\Controllers\Public\LandingPageController;
@@ -18,13 +19,13 @@ use Illuminate\Support\Facades\Route;
 # ------------------------------------------------------------------------------------------------- #
 # Route Halaman Auth
 # ------------------------------------------------------------------------------------------------- #
-Route::get('/tkab-login', [LoginController::class, 'index'])->name('login');
-Route::post('/tkab-login', [LoginController::class, 'login'])->name('login.process');
-
 Route::get('/tkab-register', [RegisterController::class, 'create'])->name('register');
 Route::post('/tkab-register', [RegisterController::class, 'store'])->name('register.store');
-
+Route::get('/otp', [OtpController::class, 'create'])->name('otp');
+Route::get('/tkab-login', [LoginController::class, 'index'])->name('login');
+Route::post('/tkab-login', [LoginController::class, 'login'])->name('login.process');
 Route::post('/tkab-logout', [LoginController::class, 'logout'])->name('logout');
+
 # ------------------------------------------------------------------------------------------------- #
 # Route Halaman Frontend
 # ------------------------------------------------------------------------------------------------- #
