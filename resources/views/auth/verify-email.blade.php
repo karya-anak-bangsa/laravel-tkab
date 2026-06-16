@@ -18,14 +18,24 @@
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
-                    <div class="col-lg-12 mb-0">
+                    <div class="col-lg-12 mb-2 text-center">
                         <button type="submit" class="btn btn-login btn-secondary w-100">
                             <span><i class="fas fa-paper-plane me-2"></i>Verification</span>
                         </button>
                     </div>
+
                 </div>
             </form>
             {{-- form --}}
+
+            <div class="row">
+                <div class="col-lg-12 mb-0 text-center">
+                    <form action="{{ route('verify.email.resend', $employees->id_employees) }}" method="POST">
+                        @csrf
+                        <button type="submit" class="btn btn-link">Resend Verification Code</button>
+                    </form>
+                </div>
+            </div>
         </div>
         {{-- card-body --}}
     </div>
