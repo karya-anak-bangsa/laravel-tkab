@@ -37,7 +37,7 @@
             </nav>
 
             {{-- 2. sidebar --}}
-            <aside class="main-sidebar sidebar-dark-warning">
+            <aside class="main-sidebar sidebar-dark-success">
                 <div class="sidebar">
                     @include('layouts.partials-backend.sidebar')
                 </div>
