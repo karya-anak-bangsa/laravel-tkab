@@ -19,7 +19,7 @@
                         reverseButtons: true
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            HTMLFormElement.prototype.submit.call(form); // ✔ clean
+                            HTMLFormElement.prototype.submit.call(form);
                         }
                     });
 

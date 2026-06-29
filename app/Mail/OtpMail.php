@@ -20,9 +20,7 @@ class OtpMail extends Mailable
 
     public function build()
     {
-        return $this
-            ->subject('PT. Teknologi Karya Anak Bangsa - Verification Code')
-            ->view('auth.otp-mail')
+        return $this->subject('PT. Teknologi Karya Anak Bangsa - Verification Code')->view('auth.otp-mail')
             ->with([
                 'employees' => $this->employees,
             ]);

@@ -14,10 +14,7 @@ class VerifyEmailController extends Controller
     public function create(string $id)
     {
         $employees = Employees::findOrFail($id);
-        return view(
-            'auth.verify-email',
-            compact('employees')
-        );
+        return view('auth.verify-email', compact('employees'));
     }
 
     public function store(Request $request, string $id)
