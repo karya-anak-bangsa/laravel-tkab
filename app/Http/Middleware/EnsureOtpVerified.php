@@ -18,7 +18,6 @@ class EnsureOtpVerified
         }
 
         if (is_null($employees->otp_verified_at)) {
-
             return redirect()
                 ->route('verify.email.create', $employees->id_employees)
                 ->with('notify', [

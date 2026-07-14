@@ -49,14 +49,3 @@ Route::middleware(['auth:employees', 'verified.employee',])->prefix('admin')->na
     });
 
 # ------------------------------------------------------------------------------------------------- #
-# Testing SMPT
-# ------------------------------------------------------------------------------------------------- #
-// use Illuminate\Support\Facades\Mail;
-// Route::get('/test-mail', function () {
-
-//     Mail::raw('SMTP Gmail berhasil.', function ($message) {
-//         $message->to('aryajayaalamsyah@gmail.com')->subject('SMTP Test');
-//     });
-
-//     return 'Email sent';
-// });
