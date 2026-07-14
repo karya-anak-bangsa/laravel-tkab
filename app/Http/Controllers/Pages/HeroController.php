@@ -10,8 +10,8 @@ class HeroController extends Controller
 {
     public function index()
     {
-        $data = Hero::first();
-        return view('pages.hero.index', compact('data'));
+        $heroes = Hero::latest()->paginate(10);
+        return view('pages.hero.index', compact('heroes'));
     }
 
     public function show(string $id)

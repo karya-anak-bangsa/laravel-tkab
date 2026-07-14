@@ -9,6 +9,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tb_hero', function (Blueprint $table) {
+
+            # primary key
             $table->id('id_hero');
 
             # column names
@@ -24,7 +26,7 @@ return new class extends Migration
             $table->string('cta_2')->nullable();
 
             # other columns
-            $table->enum('status_data', ['Active', 'Not Active'])->default('Active');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });

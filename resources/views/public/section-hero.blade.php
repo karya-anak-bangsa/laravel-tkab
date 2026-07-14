@@ -3,7 +3,7 @@
         <div class="row align-items-center">
 
             <div class="col-lg-6">
-                <div class="hero-content pe-0 pe-lg-5">
+                <div class="hero-content">
 
                     {{-- <div class="hero-badge">
                         <i class="bi bi-lightning-fill"></i>

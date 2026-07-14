@@ -27,9 +27,9 @@
                         </a>
                     </div>
                     <div class="text-right text-muted">
-                        <small class="text-danger">
+                        <span class="text-danger">
                             You logged on {{ now()->format('Y-m-d') }} - {{ now()->format('H:i') }} WIB
-                        </small>
+                        </span>
                     </div>
                 </div>
             </div>

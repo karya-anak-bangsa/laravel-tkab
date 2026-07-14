@@ -20,11 +20,6 @@ class Hero extends Model
     protected $table        = 'tb_hero';
     protected $primaryKey   = 'id_hero';
 
-    # ...
-    protected $keyType      = 'int';
-    public $incrementing    = true;
-
-
     # -------------------------------------------------------------------------- #
     # MASS ASSIGNMENT
     # -------------------------------------------------------------------------- #
@@ -39,19 +34,20 @@ class Hero extends Model
         'keywords_5',
         'cta_1',
         'cta_2',
-        'status_data',
+        'is_active',
     ];
 
     # ...
     protected $attributes = [
-        'status_data' => 'Active',
+        'is_active' => true
     ];
 
     # ...
     protected $casts = [
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
-        'deleted_at' => 'datetime',
+        'is_active'     => 'boolean',
+        'created_at'    => 'timestamp',
+        'updated_at'    => 'timestamp',
+        'deleted_at'    => 'timestamp',
     ];
 
 

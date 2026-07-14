@@ -30,47 +30,62 @@
         {{-- table - thead --}}
         <x-slot:thead>
             <tr>
-                <th width="15%" class="text-left">Title</th>
-                <th width="40%" class="text-left">Description</th>
-                <th width="20%" class="text-left">Keywoard</th>
-                <th width="20%" class="text-left">CTA</th>
-                <th width="5%" class="text-center">Action</th>
+                <th class="text-center">No</th>
+                <th class="text-left">Title and Description</th>
+                <th class="text-left">Keywoard</th>
+                <th class="text-left">CTA</th>
+                <th class="text-center">Status</th>
+                <th class="text-center text-nowrap">Action</th>
             </tr>
         </x-slot>
 
         {{-- table - tbody --}}
         <x-slot:tbody>
-            <tr>
-                <td class="text-left">{{ $data->title ?? '-' }}</td>
-                <td class="text-left">{!! $data->description ?? '-' !!}</td>
-                <td class="text-left">
-                    @foreach ($data->keywords() as $keyword)
-                        <span class="badge badge-primary badge-custom mb-1">
-                            {{ $keyword }}
+            @foreach ($heroes as $hero)
+                <tr>
+                    <td class="text-center">{{ $loop->iteration }}</td>
+                    <td class="text-left">
+                        <strong>{{ $hero->title ?? '-' }}</strong><br>
+                        <small>{!! $hero->description ?? '-' !!}</small>
+                    </td>
+                    <td class="text-left">
+                        @foreach ($hero->keywords() as $keyword)
+                            <span class="badge badge-primary badge-custom mb-1">
+                                {{ $keyword }}
+                            </span>
+                        @endforeach
+                    </td>
+                    <td class="text-left">
+                        @foreach ($hero->cta() as $cta)
+                            <span class="badge badge-primary badge-custom mb-1">
+                                {{ $cta }}
+                            </span>
+                        @endforeach
+                    </td>
+                    <td class="text-center">
+                        <span class="badge {{ $hero->is_active ? 'badge-success' : 'badge-danger' }} badge-custom">
+                            {{ $hero->is_active ? 'Aktif' : 'Nonaktif' }}
                         </span>
-                    @endforeach
-                </td>
-                <td class="text-left">
-                    @foreach ($data->cta() as $cta)
-                        <span class="badge badge-success badge-custom mb-1">
-                            {{ $cta }}
-                        </span>
-                    @endforeach
-                </td>
-                <td class="text-center">
-                    <a href="{{ route('admin.hero.edit', $data->id_hero) }}" class="btn btn-sm btn-warning">
-                        <i class="fa-solid fa-edit"></i>
-                    </a>
-                </td>
-            </tr>
+                    </td>
+                    <td class="text-center text-nowrap">
+                        <a href="#" class="btn btn-sm btn-info">
+                            <i class="fa-solid fa-eye"></i>
+                        </a>
+                        <a href="{{ route('admin.hero.edit', $hero->id_hero) }}" class="btn btn-sm btn-warning">
+                            <i class="fa-solid fa-edit"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-danger">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
         </x-slot>
 
         {{-- card-footer --}}
         <x-slot:footer>
             <small class="text-danger">
-                <div class="text-right">
-                    Data Access {{ now()->format('Y/m/d - H:i') }} WIB
-                </div>
+                <div class="text-right"> Data Access {{ now()->format('Y/m/d - H:i') }} WIB </div>
             </small>
         </x-slot>
 

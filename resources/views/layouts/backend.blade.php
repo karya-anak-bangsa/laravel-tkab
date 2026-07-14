@@ -5,7 +5,7 @@
         {{-- set metadata on this website --}}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>PT. Teknologi Karya Anak Bangsa | Solusi IT Terbaik untuk Keberlanjutan Bisnis Anda</title>
+        <title>Administrator | PT. Teknologi Karya Anak Bangsa</title>
 
         {{-- set icon --}}
         <link rel="icon" href="{{ asset('img/laravel-merah.png') }}" type="image/png">
@@ -21,8 +21,6 @@
 
         {{-- template style - adminlte 3.2.0 --}}
         <link rel="stylesheet" href="{{ asset('template-backend/adminlte-3.2.0/dist/css/adminlte.min.css') }}">
-
-        {{-- template style - adminlte custom --}}
         <link rel="stylesheet" href="{{ asset('template-backend/adminlte-stylesheet/template.css') }}">
 
         @stack('styles')
