@@ -1,16 +1,16 @@
-<a href="{{ route('admin.dashboard') }}" class="brand-link mb-3">
+{{-- <a href="{{ route('admin.dashboard') }}" class="brand-link mb-3">
     <img src="{{ asset('img/laravel-merah.png') }}" alt="AdminLTE Logo" class="brand-image img-fluid">
     <span class="brand-text font-weight-light">TKAB Apps</span>
-</a>
+</a> --}}
 
-{{-- <div class="user-panel mt-3 mb-3 pb-3 d-flex align-items-center">
-    <div class="image">
+<div class="user-panel mt-3 mb-3 pb-3 d-flex align-items-center">
+    {{-- <div class="image">
         <img src="{{ asset('img/laravel-merah.png') }}" class="img-fluid">
-    </div>
+    </div> --}}
     <div class="info">
-        <a href="{{ route('admin.dashboard') }}" class="d-block text-light">TKAB Apps</a>
+        <a href="{{ route('admin.dashboard') }}" class="d-block text-light">Teknologi Karya Anak Bangsa</a>
     </div>
-</div> --}}
+</div>
 
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
