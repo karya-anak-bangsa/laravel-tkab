@@ -19,13 +19,19 @@
     {{-- CALLOUT --}}
     {{-- ----------------------------------------------------------------------- --}}
     <x-pages.callout>
-        The information about PT. Teknologi Karya Anak Bangsa
+        <strong>The information about PT. Teknologi Karya Anak Bangsa</strong>
     </x-pages.callout>
 
     {{-- ----------------------------------------------------------------------- --}}
     {{-- TABLE --}}
     {{-- ----------------------------------------------------------------------- --}}
     <x-pages.index-table>
+
+        <x-slot:header>
+            <a href="{{ route('admin.hero.create') }}" class="btn btn-success">
+                <i class="fa-solid fa-circle-plus mr-2"></i><span>Add Data</span>
+            </a>
+        </x-slot>
 
         {{-- table - thead --}}
         <x-slot:thead>
@@ -64,7 +70,7 @@
                     </td>
                     <td class="text-center">
                         <span class="badge {{ $hero->is_active ? 'badge-success' : 'badge-danger' }} badge-custom">
-                            {{ $hero->is_active ? 'Aktif' : 'Nonaktif' }}
+                            {{ $hero->is_active ? 'Active' : 'Disable' }}
                         </span>
                     </td>
                     <td class="text-center text-nowrap">

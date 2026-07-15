@@ -21,7 +21,7 @@ class HeroController extends Controller
 
     public function create()
     {
-        //
+        return view('pages.hero.create');
     }
 
     public function store(Request $request)
