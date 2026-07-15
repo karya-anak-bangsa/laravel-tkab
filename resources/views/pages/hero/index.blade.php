@@ -8,12 +8,10 @@
 @section('nav-hero', 'active')
 @section('content')
 
-    @if (session('notify'))
-        <div id="notify-data"
-            data-status="{{ session('notify.type') }}"
-            data-text="{{ session('notify.message') }}">
-        </div>
-    @endif
+    {{-- ----------------------------------------------------------------------- --}}
+    {{-- ALERT --}}
+    {{-- ----------------------------------------------------------------------- --}}
+    @include('components.notify.alert')
 
     {{-- ----------------------------------------------------------------------- --}}
     {{-- CALLOUT --}}
@@ -27,14 +25,15 @@
     {{-- ----------------------------------------------------------------------- --}}
     <x-pages.index-table>
 
-        <x-slot:header>
+        {{-- card-header --}}
+        <x-slot name="header">
             <a href="{{ route('admin.hero.create') }}" class="btn btn-success">
                 <i class="fa-solid fa-circle-plus mr-2"></i><span>Add Data</span>
             </a>
         </x-slot>
 
         {{-- table - thead --}}
-        <x-slot:thead>
+        <x-slot name="thead">
             <tr>
                 <th class="text-center">No</th>
                 <th class="text-left">Title and Description</th>
@@ -46,7 +45,7 @@
         </x-slot>
 
         {{-- table - tbody --}}
-        <x-slot:tbody>
+        <x-slot name="tbody">
             @foreach ($heroes as $hero)
                 <tr>
                     <td class="text-center">{{ $loop->iteration }}</td>
@@ -89,14 +88,13 @@
         </x-slot>
 
         {{-- card-footer --}}
-        <x-slot:footer>
+        <x-slot name="footer">
             <small class="text-danger">
-                <div class="text-right"> Data Access {{ now()->format('Y/m/d - H:i') }} WIB </div>
+                <div class="text-right">Data Access {{ now()->format('Y/m/d - H:i') }} WIB</div>
             </small>
         </x-slot>
 
     </x-pages.index-table>
-
 @endsection
 
 {{-- push scripts --}}

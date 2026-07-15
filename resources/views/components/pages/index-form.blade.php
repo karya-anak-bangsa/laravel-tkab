@@ -5,7 +5,7 @@
             <div class="card-body">{{ $slot }}</div>
             <div class="card-footer">
                 <div class="text-right text-dark">
-                    <small class="required">Required fields. Please fill in the data correctly</small>
+                    <span class="required">Required fields. Please fill in the data correctly</span>
                 </div>
             </div>
 

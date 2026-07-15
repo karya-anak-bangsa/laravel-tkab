@@ -53,6 +53,11 @@
             </div>
             {{-- content-wrapper --}}
 
+            {{-- 4. footer --}}
+            <footer class="main-footer">
+                @include('layouts.partials-backend.footer')
+            </footer>
+
         </div>
         {{-- wrapper --}}
 

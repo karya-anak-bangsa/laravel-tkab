@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Pages;
 
 use App\Models\Hero;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Pages\Hero\StoreHeroRequest;
+use App\Http\Requests\Pages\Hero\UpdateHeroRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class HeroController extends Controller
 {
@@ -24,9 +27,20 @@ class HeroController extends Controller
         return view('pages.hero.create');
     }
 
-    public function store(Request $request)
+    // public function store(Request $request)
+    public function store(StoreHeroRequest $request)
     {
-        //
+        $data = $request->validated();
+        // $data['image'] = $request->file('image')->store('hero', 'public');
+
+        // Hero::create($data);
+
+        return redirect()
+            ->route('admin.hero.index')
+            ->with('notify', [
+                'type'      => 'info',
+                'message'   => 'Data successfully created.',
+            ]);
     }
 
     public function edit(string $id)

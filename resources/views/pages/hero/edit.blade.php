@@ -6,7 +6,7 @@
     {{-- CALLOUT --}}
     {{-- ----------------------------------------------------------------------- --}}
     <x-pages.callout>
-        The information about PT. Teknologi Karya Anak Bangsa
+        <strong>The information about PT. Teknologi Karya Anak Bangsa</strong>
     </x-pages.callout>
 
     {{-- ----------------------------------------------------------------------- --}}
@@ -51,7 +51,7 @@
             {{-- ----------------------------------------------------------------------- --}}
             {{-- KEYWORDS --}}
             {{-- ----------------------------------------------------------------------- --}}
-            <div class="row mb-3">
+            {{-- <div class="row mb-3">
                 <div class="col-lg-4">
                     <x-pages.form-input-text
                         label="First keyword"
@@ -92,12 +92,12 @@
                         :required=false>
                     </x-pages.form-input-text>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- ----------------------------------------------------------------------- --}}
             {{-- CTA --}}
             {{-- ----------------------------------------------------------------------- --}}
-            <div class="row mb-3">
+            {{-- <div class="row mb-3">
                 <div class="col-lg-4">
                     <x-pages.form-input-text
                         label="Call to Action"
@@ -114,7 +114,7 @@
                         :required=false>
                     </x-pages.form-input-text>
                 </div>
-            </div>
+            </div> --}}
 
             {{-- ----------------------------------------------------------------------- --}}
             {{-- BUTTON --}}
