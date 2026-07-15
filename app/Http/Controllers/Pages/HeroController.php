@@ -31,9 +31,9 @@ class HeroController extends Controller
     public function store(StoreHeroRequest $request)
     {
         $data = $request->validated();
-        // $data['image'] = $request->file('image')->store('hero', 'public');
+        $data['image'] = $request->file('image')->store('hero', 'public');
 
-        // Hero::create($data);
+        Hero::create($data);
 
         return redirect()
             ->route('admin.hero.index')

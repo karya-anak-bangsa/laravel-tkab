@@ -12,7 +12,7 @@
     </x-pages.callout>
 
     <x-pages.index-form>
-        <form action="{{-- route('admin.hero.update', $data->id_hero) --}}" method="post" enctype="multipart/form-data" class="confirm-submit">
+        <form action="{{ route('admin.hero.store') }}" method="post" enctype="multipart/form-data" class="confirm-submit">
 
             @csrf
             @include('pages.hero._form')
