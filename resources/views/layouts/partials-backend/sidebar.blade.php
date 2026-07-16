@@ -40,8 +40,8 @@
                 <i class="nav-icon fa-solid fa-sitemap"></i>
                 <p>Services</p>
             </a>
-        </li>
-        <li class="nav-item ">
+        </li> --}}
+        {{-- <li class="nav-item ">
             <a href="" class="nav-link @yield('nav-porfolio')">
                 <i class="nav-icon fa-solid fa-box-archive"></i>
                 <p>Porfolio</p>
