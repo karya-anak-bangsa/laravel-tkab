@@ -4,11 +4,11 @@
 </a> --}}
 
 <div class="user-panel mt-3 mb-3 pb-3 d-flex align-items-center">
-    {{-- <div class="image">
+    <div class="image">
         <img src="{{ asset('img/laravel-merah.png') }}" class="img-fluid">
-    </div> --}}
+    </div>
     <div class="info">
-        <a href="{{ route('admin.dashboard') }}" class="d-block text-light">Teknologi Karya Anak Bangsa</a>
+        <a href="{{ route('admin.dashboard') }}" class="d-block text-light">PT. TKAB</a>
     </div>
 </div>
 

@@ -30,7 +30,10 @@ class HeroController extends Controller
     public function store(StoreHeroRequest $request)
     {
         $data = $request->validated();
-        $data['image'] = $request->file('image')->store('hero', 'public');
+
+        if ($request->hasFile('image')) {
+            $data['image'] = $request->file('image')->store('hero', 'public');
+        }
 
         Hero::create($data);
 
@@ -50,10 +53,8 @@ class HeroController extends Controller
     public function update(UpdateHeroRequest $request, Hero $hero)
     {
         $data = $request->validated();
+
         if ($request->hasFile('image')) {
-            if ($hero->image) {
-                Storage::disk('public')->delete($hero->image);
-            }
             $data['image'] = $request->file('image')->store('hero', 'public');
         }
 
@@ -74,6 +75,7 @@ class HeroController extends Controller
             'updated_at' => now(),
             'deleted_at' => now(),
         ]);
+
         return redirect()
             ->route('admin.hero.index')
             ->with('notify', [
