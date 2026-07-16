@@ -42,10 +42,9 @@ class HeroController extends Controller
             ]);
     }
 
-    public function edit(string $id)
+    public function edit(Hero $hero)
     {
-        $data = Hero::findOrFail($id);
-        return view('pages.hero.edit', compact('data'));
+        return view('pages.hero.edit', compact('hero'));
     }
 
     public function update(UpdateHeroRequest $request, Hero $hero)

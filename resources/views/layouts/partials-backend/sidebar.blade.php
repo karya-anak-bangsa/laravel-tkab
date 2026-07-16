@@ -35,7 +35,7 @@
                 <p>About TKAB</p>
             </a>
         </li>
-        <li class="nav-item ">
+        {{-- <li class="nav-item ">
             <a href="" class="nav-link @yield('nav-services')">
                 <i class="nav-icon fa-solid fa-sitemap"></i>
                 <p>Services</p>
@@ -64,6 +64,6 @@
                 <i class="nav-icon fa-solid fa-address-book"></i>
                 <p>Contact</p>
             </a>
-        </li>
+        </li> --}}
     </ul>
 </nav>

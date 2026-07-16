@@ -16,7 +16,7 @@ class HeroSeeder extends Seeder
         Hero::create([
             'title'         => 'Solusi IT Terbaik untuk Keberlanjutan Bisnis Anda',
             'description'   => '<i>Kami menghadirkan solusi digital modern yang membantu bisnis berkembang lebih cepat, efisien, dan siap menghadapi era teknologi.</i>',
-            'image'         => 'hero/hero-4.png',
+            'image'         => 'hero/hero-4.webp',
             'keyword_1'    => 'Web Development',
             'keyword_2'    => 'Mobile Development',
             'keyword_3'    => 'IT Training',
@@ -30,7 +30,7 @@ class HeroSeeder extends Seeder
         // Hero::create([
         //     'title'         => 'Dari Ide Menjadi Produk Digital yang Nyata',
         //     'description'   => '<i>Kami bantu bisnis Anda tumbuh lewat website, aplikasi mobile, dan SDM IT yang siap kerja lewat pelatihan bersertifikat</i>',
-        //     'image'         => 'hero/hero-4.png',
+        //     'image'         => 'hero/hero-4.webp',
         //     'keyword_1'    => 'Website',
         //     'keyword_2'    => 'Mobile Apps',
         //     'keyword_3'    => 'Training',
@@ -44,7 +44,7 @@ class HeroSeeder extends Seeder
         // Hero::create([
         //     'title'         => 'Wujudkan Transformasi Digital Bisnis Anda Bersama Kami',
         //     'description'   => '<i>Dari pembuatan website, aplikasi mobile, hingga pelatihan dan sertifikasi IT — kami hadir sebagai mitra teknologi tepercaya untuk pertumbuhan bisnis Anda.</i>',
-        //     'image'         => 'hero/hero-4.png',
+        //     'image'         => 'hero/hero-4.webp',
         //     'keyword_1'    => 'Cepat',
         //     'keyword_2'    => 'Andal',
         //     'keyword_3'    => 'Profesional',

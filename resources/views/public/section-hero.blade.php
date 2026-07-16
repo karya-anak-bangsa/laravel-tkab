@@ -5,33 +5,30 @@
             <div class="col-lg-6">
                 <div class="hero-content">
 
-                    {{-- <div class="hero-badge">
-                        <i class="bi bi-lightning-fill"></i>
-                        <span>Solusi IT Terbaik untuk Kelangsungan Bisnis Anda</span>
-                    </div> --}}
+                    @foreach ($hero as $hero)
+                        <h1 class="hero-title">{{ $hero->title }}</h1>
+                        <p class="hero-description">{!! $hero->description !!}</p>
 
-                    <h1 class="hero-title">{{ $hero->title }}</h1>
-                    <p class="hero-description">{!! $hero->description !!}</p>
+                        <div class="hero-features">
+                            @foreach ($hero->keyword() as $keyword)
+                                <div class="feature-item">
+                                    <i class="bi bi-rocket-takeoff-fill"></i>
+                                    <span>{{ $keyword }}</span>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="hero-actions">
+                            <a href="#" class="btn-primary glightbox">
+                                <i class="bi bi-whatsapp"></i>
+                                <span>{{ $hero->cta_1 }}</span>
+                            </a>
+                            <a href="#" class="btn-secondary glightbox">
+                                <i class="bi bi-stack"></i>
+                                <span>{{ $hero->cta_2 }}</span>
+                            </a>
+                        </div>
+                    @endforeach
 
-                    <div class="hero-features">
-                        @foreach ($hero->keywords() as $keywords)
-                            <div class="feature-item">
-                                <i class="bi bi-rocket-takeoff-fill"></i>
-                                <span>{{ $keywords }}</span>
-                            </div>
-                        @endforeach
-                    </div>
-                    <div class="hero-actions">
-                        <a href="#" class="btn-primary glightbox">
-                            <i class="bi bi-whatsapp"></i>
-                            <span>{{ $hero->cta_1 }}</span>
-                        </a>
-                        <a href="#" class="btn-secondary glightbox">
-                            <i class="bi bi-stack"></i>
-                            <span>{{ $hero->cta_2 }}</span>
-                        </a>
-                    </div>
-                    {{-- hero-actions --}}
                 </div>
                 {{-- hero-content --}}
             </div>

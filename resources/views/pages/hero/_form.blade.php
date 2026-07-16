@@ -3,7 +3,7 @@
         <x-pages.form-input-text
             label="Title"
             name="title"
-            :value="$data->title ?? ''"
+            :value="$hero->title ?? ''"
             :required=true>
         </x-pages.form-input-text>
     </div>
@@ -11,7 +11,7 @@
         <x-pages.form-input-textarea
             label="Description"
             name="description"
-            :value="$data->description ?? ''"
+            :value="$hero->description ?? ''"
             :required=true>
         </x-pages.form-input-textarea>
     </div>
@@ -19,7 +19,7 @@
         <x-pages.form-input-file
             label="Hero Image"
             name="image"
-            :value="$data->image_url ?? ''"
+            :value="$hero->image_url ?? ''"
             :required=false>
         </x-pages.form-input-file>
     </div>
@@ -30,7 +30,7 @@
         <x-pages.form-input-text
             label="First keyword"
             name="keyword_1"
-            :value="$data->keyword_1 ?? ''"
+            :value="$hero->keyword_1 ?? ''"
             :required=true>
         </x-pages.form-input-text>
     </div>
@@ -38,7 +38,7 @@
         <x-pages.form-input-text
             label="Second keyword"
             name="keyword_2"
-            :value="$data->keyword_2 ?? ''"
+            :value="$hero->keyword_2 ?? ''"
             :required=true>
         </x-pages.form-input-text>
     </div>
@@ -46,7 +46,7 @@
         <x-pages.form-input-text
             label="Third keyword"
             name="keyword_3"
-            :value="$data->keyword_3 ?? ''"
+            :value="$hero->keyword_3 ?? ''"
             :required=true>
         </x-pages.form-input-text>
     </div>
@@ -54,7 +54,7 @@
         <x-pages.form-input-text
             label="Fourth keyword"
             name="keyword_4"
-            :value="$data->keyword_4 ?? ''"
+            :value="$hero->keyword_4 ?? ''"
             :required=false>
         </x-pages.form-input-text>
     </div>
@@ -62,7 +62,7 @@
         <x-pages.form-input-text
             label="Fifth keyword"
             name="keyword_5"
-            :value="$data->keyword_5 ?? ''"
+            :value="$hero->keyword_5 ?? ''"
             :required=false>
         </x-pages.form-input-text>
     </div>
@@ -73,7 +73,7 @@
         <x-pages.form-input-text
             label="Call to Action"
             name="cta_1"
-            :value="$data->cta_1 ?? ''"
+            :value="$hero->cta_1 ?? ''"
             :required=true>
         </x-pages.form-input-text>
     </div>
@@ -81,7 +81,7 @@
         <x-pages.form-input-text
             label="Call to Action"
             name="cta_2"
-            :value="$data->cta_2 ?? ''"
+            :value="$hero->cta_2 ?? ''"
             :required=true>
         </x-pages.form-input-text>
     </div>

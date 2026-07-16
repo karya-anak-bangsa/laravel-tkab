@@ -13,18 +13,13 @@ class LandingPageController extends Controller
 {
     public function index()
     {
+        $hero       = Hero::where('is_active', true)->latest()->get();
+        $services   = Services::with('activeServicesFeatures')->active()->ordered()->get();
 
-        # Query untuk menampilkan data dari database
-        $hero = Hero::first();
-        $services = Services::with('activeServicesFeatures')->active()->ordered()->get();
-
-        # return values
         return view('public.main', compact(
             'hero',
             'services',
         ));
-
-        // return view('layouts.frontend');
     }
 
     public function show(string $id)

@@ -73,9 +73,8 @@
                         </span>
                     </td>
                     <td class="text-center text-nowrap">
-                        <a href="#" class="btn btn-sm btn-info">
-                            <i class="fa-solid fa-eye"></i>
-                        </a>
+
+                        {{-- UPDATE --}}
                         <a href="{{ route('admin.hero.edit', $hero->id_hero) }}" class="btn btn-sm btn-warning">
                             <i class="fa-solid fa-edit"></i>
                         </a>
