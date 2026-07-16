@@ -49,41 +49,19 @@ class HeroController extends Controller
         return view('pages.hero.edit', compact('data'));
     }
 
-    public function update(Request $request, string $id)
+    public function update(UpdateHeroRequest $request, Hero $hero)
     {
 
-        # ---------------------------------------------------------------------- #
-        # VALIDATION
-        # ---------------------------------------------------------------------- #
-        $validated = $request->validate([
-            'title'         => ['required', 'string', 'max:255',],
-            'description'   => ['nullable', 'string',],
-            'image'         => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:4096',],
-            'keywords_1'    => ['nullable', 'string', 'max:255',],
-            'keywords_2'    => ['nullable', 'string', 'max:255',],
-            'keywords_3'    => ['nullable', 'string', 'max:255',],
-            'keywords_4'    => ['nullable', 'string', 'max:255',],
-            'keywords_5'    => ['nullable', 'string', 'max:255',],
-            'cta_1'         => ['nullable', 'string', 'max:255',],
-            'cta_2'         => ['nullable', 'string', 'max:255',],
-        ]);
-
-        # ---------------------------------------------------------------------- #
-        # UPLOAD IMAGE
-        # ---------------------------------------------------------------------- #
+        $data = $request->validated();
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('hero', 'public');
+            if ($hero->image) {
+                Storage::disk('public')->delete($hero->image);
+            }
+            $data['image'] = $request->file('image')->store('hero', 'public');
         }
 
-        # ---------------------------------------------------------------------- #
-        # FIND DATA dan UPDATE DATA
-        # ---------------------------------------------------------------------- #
-        $data = Hero::findOrFail($id);
-        $data->update($validated);
+        $hero->update($data);
 
-        # ---------------------------------------------------------------------- #
-        # REDIRECT
-        # ---------------------------------------------------------------------- #
         return redirect()
             ->route('admin.hero.index')
             ->with('notify', [

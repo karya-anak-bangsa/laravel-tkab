@@ -20,7 +20,7 @@
             label="Hero Image"
             name="image"
             :value="$data->image_url ?? ''"
-            :required=true>
+            :required=false>
         </x-pages.form-input-file>
     </div>
 </div>
@@ -29,41 +29,60 @@
     <div class="col-lg-4">
         <x-pages.form-input-text
             label="First keyword"
-            name="keywords_1"
-            :value="$data->keywords_1 ?? ''"
-            :required=false>
+            name="keyword_1"
+            :value="$data->keyword_1 ?? ''"
+            :required=true>
         </x-pages.form-input-text>
     </div>
     <div class="col-lg-4">
         <x-pages.form-input-text
             label="Second keyword"
-            name="keywords_2"
-            :value="$data->keywords_2 ?? ''"
-            :required=false>
+            name="keyword_2"
+            :value="$data->keyword_2 ?? ''"
+            :required=true>
         </x-pages.form-input-text>
     </div>
     <div class="col-lg-4">
         <x-pages.form-input-text
             label="Third keyword"
-            name="keywords_3"
-            :value="$data->keywords_3 ?? ''"
-            :required=false>
+            name="keyword_3"
+            :value="$data->keyword_3 ?? ''"
+            :required=true>
         </x-pages.form-input-text>
     </div>
     <div class="col-lg-4">
         <x-pages.form-input-text
             label="Fourth keyword"
-            name="keywords_4"
-            :value="$data->keywords_4 ?? ''"
+            name="keyword_4"
+            :value="$data->keyword_4 ?? ''"
             :required=false>
         </x-pages.form-input-text>
     </div>
     <div class="col-lg-4">
         <x-pages.form-input-text
             label="Fifth keyword"
-            name="keywords_5"
-            :value="$data->keywords_5 ?? ''"
+            name="keyword_5"
+            :value="$data->keyword_5 ?? ''"
             :required=false>
+        </x-pages.form-input-text>
+    </div>
+</div>
+
+<div class="row border-bottom mb-3">
+    <div class="col-lg-4">
+        <x-pages.form-input-text
+            label="Call to Action"
+            name="cta_1"
+            :value="$data->cta_1 ?? ''"
+            :required=true>
+        </x-pages.form-input-text>
+    </div>
+    <div class="col-lg-4">
+        <x-pages.form-input-text
+            label="Call to Action"
+            name="cta_2"
+            :value="$data->cta_2 ?? ''"
+            :required=true>
         </x-pages.form-input-text>
     </div>
 </div>

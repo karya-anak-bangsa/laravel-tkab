@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->string('image')->nullable();
-            $table->string('keywords_1')->nullable();
-            $table->string('keywords_2')->nullable();
-            $table->string('keywords_3')->nullable();
-            $table->string('keywords_4')->nullable();
-            $table->string('keywords_5')->nullable();
+            $table->string('keyword_1')->nullable();
+            $table->string('keyword_2')->nullable();
+            $table->string('keyword_3')->nullable();
+            $table->string('keyword_4')->nullable();
+            $table->string('keyword_5')->nullable();
             $table->string('cta_1')->nullable();
             $table->string('cta_2')->nullable();
 

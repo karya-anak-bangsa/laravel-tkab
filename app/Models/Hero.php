@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -27,11 +26,11 @@ class Hero extends Model
         'title',
         'description',
         'image',
-        'keywords_1',
-        'keywords_2',
-        'keywords_3',
-        'keywords_4',
-        'keywords_5',
+        'keyword_1',
+        'keyword_2',
+        'keyword_3',
+        'keyword_4',
+        'keyword_5',
         'cta_1',
         'cta_2',
         'is_active',
@@ -50,34 +49,17 @@ class Hero extends Model
         'deleted_at'    => 'timestamp',
     ];
 
-
-    # -------------------------------------------------------------------------- #
-    # CONSTANTS                                                                  #
-    # -------------------------------------------------------------------------- #
-    const STATUS_ACTIVE     = 'Active';
-    const STATUS_NOT_ACTIVE = 'Not Active';
-
-
-    # -------------------------------------------------------------------------- #
-    # SCOPES                                                                     #
-    # -------------------------------------------------------------------------- #
-    public function scopeActive(Builder $query): Builder
-    {
-        return $query->where('status_data', self::STATUS_ACTIVE);
-    }
-
-
     # -------------------------------------------------------------------------- #
     # HELPERS                                                                    #
     # -------------------------------------------------------------------------- #
-    public function keywords(): array
+    public function keyword(): array
     {
         return array_filter([
-            $this->keywords_1,
-            $this->keywords_2,
-            $this->keywords_3,
-            $this->keywords_4,
-            $this->keywords_5,
+            $this->keyword_1,
+            $this->keyword_2,
+            $this->keyword_3,
+            $this->keyword_4,
+            $this->keyword_5,
         ]);
     }
 

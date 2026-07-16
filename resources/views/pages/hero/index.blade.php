@@ -54,7 +54,7 @@
                         <small>{!! $hero->description ?? '-' !!}</small>
                     </td>
                     <td class="text-left">
-                        @foreach ($hero->keywords() as $keyword)
+                        @foreach ($hero->keyword() as $keyword)
                             <span class="badge badge-primary badge-custom mb-1">
                                 {{ $keyword }}
                             </span>

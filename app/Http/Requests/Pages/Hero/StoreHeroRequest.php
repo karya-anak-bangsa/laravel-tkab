@@ -16,14 +16,14 @@ class StoreHeroRequest extends FormRequest
         return [
             'title'       => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image'       => ['required', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
-            'keyword_1'   => ['nullable', 'string', 'max:100'],
-            'keyword_2'   => ['nullable', 'string', 'max:100'],
-            'keyword_3'   => ['nullable', 'string', 'max:100'],
+            'image'       => ['nullable', 'image', 'mimes:jpg,jpeg,png,webp', 'max:2048'],
+            'keyword_1'   => ['required', 'string', 'max:100'],
+            'keyword_2'   => ['required', 'string', 'max:100'],
+            'keyword_3'   => ['required', 'string', 'max:100'],
             'keyword_4'   => ['nullable', 'string', 'max:100'],
             'keyword_5'   => ['nullable', 'string', 'max:100'],
-            'cta_1'       => ['nullable', 'string', 'max:100'],
-            'cta_2'       => ['nullable', 'string', 'max:100'],
+            'cta_1'       => ['required', 'string', 'max:100'],
+            'cta_2'       => ['required', 'string', 'max:100'],
         ];
     }
 }

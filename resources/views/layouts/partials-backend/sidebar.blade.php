@@ -20,7 +20,7 @@
         -------------------------------------------------------------------------- --}}
         <li class="nav-item">
             <a href="{{ route('admin.dashboard') }}" class="nav-link @yield('nav-dashboard')">
-                <i class="nav-icon fa-solid fa-building-columns"></i>
+                <i class="nav-icon fa-solid fa-landmark"></i>
                 <p>Main Dashboard</p>
             </a>
         </li>
@@ -31,7 +31,7 @@
         <li class="nav-header mt-2">COMPANY PROFILE</li>
         <li class="nav-item">
             <a href="{{ route('admin.hero.index') }}" class="nav-link @yield('nav-hero')">
-                <i class="nav-icon fa-solid fa-building-columns"></i>
+                <i class="nav-icon fa-solid fa-address-card"></i>
                 <p>About TKAB</p>
             </a>
         </li>
