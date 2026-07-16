@@ -21,7 +21,7 @@ class HeroSeeder extends Seeder
             'keyword_2'    => 'Mobile Development',
             'keyword_3'    => 'IT Training',
             'keyword_4'    => 'IT Bootcamp',
-            'keyword_5'    => '',
+            'keyword_5'    => null,
             'cta_1'         => 'Konsultasi Gratis',
             'cta_2'         => 'Lihat Portofolio',
             'is_active'     => true

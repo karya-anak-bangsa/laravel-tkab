@@ -6,7 +6,6 @@ use App\Models\Hero;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Pages\Hero\StoreHeroRequest;
 use App\Http\Requests\Pages\Hero\UpdateHeroRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class HeroController extends Controller
@@ -51,7 +50,6 @@ class HeroController extends Controller
 
     public function update(UpdateHeroRequest $request, Hero $hero)
     {
-
         $data = $request->validated();
         if ($request->hasFile('image')) {
             if ($hero->image) {
@@ -70,8 +68,18 @@ class HeroController extends Controller
             ]);
     }
 
-    public function destroy(string $id)
+    public function destroy(Hero $hero)
     {
-        //
+        $hero->update([
+            'is_active' => false,
+            'updated_at' => now(),
+            'deleted_at' => now(),
+        ]);
+        return redirect()
+            ->route('admin.hero.index')
+            ->with('notify', [
+                'type'      => 'info',
+                'message'   => 'Data successfully deleted.',
+            ]);
     }
 }

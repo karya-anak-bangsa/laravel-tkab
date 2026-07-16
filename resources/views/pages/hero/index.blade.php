@@ -79,9 +79,15 @@
                         <a href="{{ route('admin.hero.edit', $hero->id_hero) }}" class="btn btn-sm btn-warning">
                             <i class="fa-solid fa-edit"></i>
                         </a>
-                        <a href="#" class="btn btn-sm btn-danger">
-                            <i class="fa-solid fa-trash"></i>
-                        </a>
+
+                        {{-- DELETE --}}
+                        <form action="{{ route('admin.hero.destroy', $hero->id_hero) }}" method="post" enctype="multipart/form-data" class="confirm-submit d-inline">
+                            @csrf @method('DELETE')
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </form>
+
                     </td>
                 </tr>
             @endforeach
@@ -100,3 +106,4 @@
 {{-- push scripts --}}
 @include('components.datatables.scripts')
 @include('components.notify.scripts')
+@include('components.sweetalert.scripts-destroy')

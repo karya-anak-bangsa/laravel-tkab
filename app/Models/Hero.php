@@ -34,6 +34,9 @@ class Hero extends Model
         'cta_1',
         'cta_2',
         'is_active',
+        'created_at',
+        'updated_at',
+        'deleted_at',
     ];
 
     # ...
