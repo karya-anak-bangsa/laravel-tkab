@@ -11,7 +11,7 @@
     @include('components.notify.alert')
 
     <x-pages.dashboard-profile
-        title="Welcome to Dashboard Administrator">
+        title="Selamat Datang di Halaman Administrator">
     </x-pages.dashboard-profile>
 
     <div class="row">

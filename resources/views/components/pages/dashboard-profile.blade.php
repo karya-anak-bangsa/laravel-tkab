@@ -10,7 +10,7 @@
             <div class="card-body">
                 <table class="table border-bottom">
                     <tr>
-                        <td width="20%" class="text-bold">Full Name</td>
+                        <td width="20%" class="text-bold">Nama Lengkap</td>
                         <td width="80%" class="text-bold">{{ auth()->user()->full_name }}</td>
                     </tr>
                     <tr>

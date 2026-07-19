@@ -6,7 +6,6 @@ use App\Models\Hero;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Pages\Hero\StoreHeroRequest;
 use App\Http\Requests\Pages\Hero\UpdateHeroRequest;
-use Illuminate\Support\Facades\Storage;
 
 class HeroController extends Controller
 {
@@ -75,6 +74,8 @@ class HeroController extends Controller
             'updated_at' => now(),
             'deleted_at' => now(),
         ]);
+
+        $hero->delete();
 
         return redirect()
             ->route('admin.hero.index')
