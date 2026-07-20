@@ -1,8 +1,3 @@
-{{-- <a href="{{ route('admin.dashboard') }}" class="brand-link mb-3">
-    <img src="{{ asset('img/laravel-merah.png') }}" alt="AdminLTE Logo" class="brand-image img-fluid">
-    <span class="brand-text font-weight-light">TKAB Apps</span>
-</a> --}}
-
 <div class="user-panel mt-3 mb-3 pb-3 d-flex align-items-center">
     <div class="image">
         <img src="{{ asset('img/laravel-merah.png') }}" class="img-fluid">
@@ -25,22 +20,71 @@
             </a>
         </li>
 
-        {{-- --------------------------------------------------------------------------
-        Company Profile
-        -------------------------------------------------------------------------- --}}
-        <li class="nav-header mt-2">COMPANY PROFILE</li>
         <li class="nav-item">
+            <a href="{{-- route('admin.dashboard') --}}" class="nav-link @yield('nav-identitas')">
+                <i class="nav-icon fa-solid fa-clone"></i>
+                <p>Identitas Website</p>
+            </a>
+        </li>
+
+        <li class="nav-item ">
+            <a href="" class="nav-link @yield('nav-tentang-kami')">
+                <i class="nav-icon fa-solid fa-clone"></i>
+                <p>Tentang Kami</p>
+            </a>
+        </li>
+
+        <li class="nav-item ">
+            <a href="" class="nav-link @yield('nav-layanan')">
+                <i class="nav-icon fa-solid fa-clone"></i>
+                <p>Layanan</p>
+            </a>
+        </li>
+
+        <li class="nav-item ">
+            <a href="" class="nav-link @yield('nav-portofolio')">
+                <i class="nav-icon fa-solid fa-clone"></i>
+                <p>Portofolio</p>
+            </a>
+        </li>
+
+        <li class="nav-item ">
+            <a href="" class="nav-link @yield('nav-blog')">
+                <i class="nav-icon fa-solid fa-clone"></i>
+                <p>Blog dan Tutorial</p>
+            </a>
+        </li>
+
+        <li class="nav-item ">
+            <a href="" class="nav-link @yield('nav-faq')">
+                <i class="nav-icon fa-solid fa-clone"></i>
+                <p>FAQ</p>
+            </a>
+        </li>
+
+        <li class="nav-item ">
+            <a href="" class="nav-link @yield('nav-kontak-kami')">
+                <i class="nav-icon fa-solid fa-clone"></i>
+                <p>Kontak Kami</p>
+            </a>
+        </li>
+
+        <li class="nav-item ">
+            <a href="" class="nav-link @yield('nav-faq')">
+                {{-- <i class="nav-icon fa-solid fa-circle-xmark"></i> --}}
+                <i class="nav-icon fa-solid fa-square-arrow-up-right"></i>
+                {{-- <i class="nav-icon fa-solid fa-square-up-right"></i> --}}
+                <p>Keluar</p>
+            </a>
+        </li>
+
+        {{-- <li class="nav-item">
             <a href="{{ route('admin.hero.index') }}" class="nav-link @yield('nav-hero')">
                 <i class="nav-icon fa-solid fa-address-card"></i>
                 <p>About TKAB</p>
             </a>
-        </li>
-        {{-- <li class="nav-item ">
-            <a href="" class="nav-link @yield('nav-services')">
-                <i class="nav-icon fa-solid fa-sitemap"></i>
-                <p>Services</p>
-            </a>
         </li> --}}
+
         {{-- <li class="nav-item ">
             <a href="" class="nav-link @yield('nav-porfolio')">
                 <i class="nav-icon fa-solid fa-box-archive"></i>
