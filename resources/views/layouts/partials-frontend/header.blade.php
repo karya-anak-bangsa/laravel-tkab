@@ -10,17 +10,17 @@
         <ul>
             <li><a href="">Home</a></li>
             <li class="dropdown">
-                <a href="#services"><span>Services</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <a href="#services"><span>Layanan</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                     <li><a href="#services">Web Development</a></li>
                     <li><a href="#services">Mobile Development</a></li>
                     <li><a href="#services">Training & Bootcamps</a></li>
                 </ul>
             </li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#learning-center">Learning Center</a></li>
+            <li><a href="#portfolio">Portofolio</a></li>
+            <li><a href="#learning-center">Blog</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Kontak Kami</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
     </nav>

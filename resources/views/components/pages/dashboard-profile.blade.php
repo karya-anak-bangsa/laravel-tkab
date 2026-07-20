@@ -14,7 +14,7 @@
                         <td width="80%" class="text-bold">{{ auth()->user()->full_name }}</td>
                     </tr>
                     <tr>
-                        <td width="20%" class="text-bold">Role and Position</td>
+                        <td width="20%" class="text-bold">Jabatan</td>
                         <td width="80%" class="text-bold">{{ auth()->user()->role }}</td>
                     </tr>
                 </table>

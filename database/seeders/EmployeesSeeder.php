@@ -13,12 +13,12 @@ class EmployeesSeeder extends Seeder
         Employees::truncate();
 
         Employees::create([
-            'full_name'         => 'PT. Teknologi Karya Anak Bangsa',
+            'full_name'         => 'Aryajaya Alamsyah',
             'role'              => 'Administrator',
             'otp_code'          => null,
             'otp_expired_at'    => null,
             'otp_verified_at'   => now(),
-            'email'             => 'admin.tkab@gmail.com',
+            'email'             => 'aryajaya.alamsyah@gmail.com',
             'password'          => Hash::make('12341234'),
             'status_data'       => 'Active',
         ]);
