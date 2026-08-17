@@ -1,6 +1,8 @@
 <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-        <a class="nav-link text-dark" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <span class="nav-link text-dark">
+            <i class="fas fa-bars"></i>
+        </span>
     </li>
 </ul>
 <ul class="navbar-nav ml-auto">
